@@ -1,217 +1,129 @@
-<header Class="hero">
-/* ===== Global (optional) ===== */
+/* ---------- Theme (GREY) ---------- */
 :root{
-  /* BG gradiant colours */
-  --bg-0: #1a1a1a;   /* deepest grey */
-  --bg-1: #2a2a2a;   /* base */
-  --bg-2: #3a3a3a;   /* mid */
-  --bg-3: #4a4a4a;   /* lightest ridge */
-  --glow: rgba(255,255,255,.05);
+  --bg-0: #1a1a1a;   /* deepest */
+  --bg-1: #232323;   /* base */
+  --bg-2: #2f2f2f;   /* mid */
+  --bg-3: #3b3b3b;   /* lightest ridge */
+  --text: #f2f2f2;
+  --muted: #cfcfcf;
+  --glow: rgba(255,255,255,.06);
+  --accent: #e6e6e6; /* button/text accent */
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  color: var(--text);
   background: var(--bg-0);
-  color:#e9f5ef;
 }
 
-/* ===== Hero background ===== */
-.hero{
-  position:relative;
-  overflow:hidden;
-  min-height: 520px;               /* adjust height to taste */
+/* ---------- Header (smaller) ---------- */
+.site-header{
+  position: sticky; top: 0;
+  background: rgba(20,20,20,.8);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #2b2b2b;
+  padding: 8px 0;                  /* <-- smaller height */
+  z-index: 10;
+}
+.site-title{
+  font-size: 1.1rem;               /* smaller title */
+  margin: 0;
+  font-weight: 600;
+}
+.site-nav a{
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 16px;
+  font-size: .95rem;               /* smaller links */
+}
+.site-nav a:hover{ color: #fff }
+
+.container{
+  width:min(1100px, 92vw);
+  margin:0 auto;
   display:flex;
   align-items:center;
-  /* Deep base gradient */
-  background:
-    radial-gradient(1400px 700px at 22% 18%, var(--glow) 0 35%, transparent 60%),
-    linear-gradient(180deg, var(--bg-1) 0%, #0c352d 55%, var(--bg-0) 100%);
-  isolation:isolate;               /* stack pseudo-elements correctly */
+  justify-content:space-between;
+  gap: 16px;
 }
 
-/* Layer 1 — broad ridge */
+/* ---------- HERO with layered grey "hills" ---------- */
+.hero{
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(1400px 700px at 22% 18%, var(--glow) 0 35%, transparent 60%),
+    linear-gradient(180deg, var(--bg-1) 0%, #1e1e1e 55%, var(--bg-0) 100%);
+  isolation: isolate;
+  border-radius: 0;                 /* no roundness */
+}
+
+/* Ridge 1 */
 .hero::before{
   content:"";
   position:absolute; inset:0;
-  background: linear-gradient(0deg, transparent 0 10%, rgba(255,255,255,.02) 60%, transparent 100%),
-              linear-gradient(180deg, var(--bg-2), var(--bg-1));
-  /* Zig-zag "mountain" silhouette */
+  background:
+    linear-gradient(0deg, transparent 0 10%, rgba(255,255,255,.02) 60%, transparent 100%),
+    linear-gradient(180deg, var(--bg-2), var(--bg-1));
   clip-path: polygon(
-    0% 32%,
-    10% 28%,
-    22% 34%,
-    34% 27%,
-    48% 33%,
-    62% 26%,
-    78% 31%,
-    100% 22%,
-    100% 100%,
-    0% 100%
+    0% 32%, 10% 28%, 22% 34%, 34% 27%, 48% 33%,
+    62% 26%, 78% 31%, 100% 22%, 100% 100%, 0% 100%
   );
   opacity:.9;
   z-index:-1;
-  filter: saturate(105%);
 }
 
-/* Layer 2 — mid ridge */
+/* Ridge 2 */
 .hero::after{
   content:"";
   position:absolute; inset:0;
   background: linear-gradient(180deg, var(--bg-3), var(--bg-2));
   clip-path: polygon(
-    0% 55%,
-    14% 48%,
-    26% 54%,
-    40% 47%,
-    55% 52%,
-    70% 45%,
-    86% 50%,
-    100% 43%,
-    100% 100%,
-    0% 100%
+    0% 55%, 14% 48%, 26% 54%, 40% 47%, 55% 52%,
+    70% 45%, 86% 50%, 100% 43%, 100% 100%, 0% 100%
   );
   opacity:.75;
   z-index:-1;
 }
 
-/* Optional: soft vignette for depth */
-.hero .vignette,
-.hero > .vignette{
-  /* If you add <div class="vignette"></div> inside .hero */
-  position:absolute; inset:-10%;
+/* ---------- Profile layout ---------- */
+.profile{
+  display:grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  width: 100%;
+  border-radius: 0;                /* ensure no roundness */
+}
+.profile-left{
+  text-align:center;
+}
+.profile-right h2{ margin-top:0 }
+.profile-right p{ color: #e6e6e6; line-height: 1.6 }
+
+.profile-pic{
+  width: 160px; height: 160px;
+  border-radius: 50%;              /* keep avatar round */
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,.12);
+  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+}
+
+.social-links a{
+  display:inline-flex;
+  width:36px;height:36px;
+  align-items:center;justify-content:center;
+  margin: 0 6px;
+  color:#fff;background:#2a2a2a;border-radius:50%;
+  text-decoration:none;border:1px solid #3a3a3a;
+}
+.social-links a:hover{ background:#3a3a3a }
+
+.btn{
+  display:inline-block;
   background:
-    radial-gradient(90% 70% at 50% 45%, transparent 50%, rgba(0,0,0,.18) 100%);
-  pointer-events:none;
-  z-index:-1;
-}
-
-/* ===== Content helpers (optional) ===== */
-.container{
-  width:min(1080px, 92vw);
-  margin-inline:auto;
-  padding: clamp(1rem, 2vw, 2rem);
-}
-
-.avatar{
-  width:140px; height:140px;
-  border-radius:50%;
-  object-fit:cover;
-  box-shadow:0 8px 30px rgba(0,0,0,.35);
-  border:10px solid rgba(255,255,255,.12);
-}
-
-/* Make sure text stays readable atop dark bg */
-.hero h1,.hero h2,.hero p,.hero a{color:#f1fbf7}
-.hero a{opacity:.95;text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.35)}
-.hero a:hover{opacity:1;border-bottom-color:transparent}
-
-/* ===== Responsive tuning ===== */
-@media (max-width: 768px){
-  .hero{ min-height: 460px }
-  .avatar{ width:110px; height:110px }
-  .container{ padding: 1.25rem }
-}
-</header>
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #343434;
-  color: white;
-}
-
-header {
-  background: #353839;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header h1 {
-  margin: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
-.profile {
-  display: flex;
-  padding: 40px;
-  gap: 40px;
-  background: linear-gradient(135deg, #0a2f23, #124734, #0b3d2e);
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-}
-.profile::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255,255,255,0.05),
-    rgba(255,255,255,0.05) 20px,
-    transparent 20px,
-    transparent 40px
-  );
-  pointer-events: none; /* keeps it from blocking clicks */
-}
-
-}
-
-.profile-left {
-  flex: 1;
-  text-align: center;
-}
-
-.profile-pic {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.profile-right {
-  flex: 2;
-  background: #124734;
-  padding: 20px;
-  border-radius: 12px;
-}
-
-h2, h3 {
-  margin-top: 0;
-}
-
-.btn {
-  display: inline-block;
-  margin: 15px 0;
-  padding: 10px 20px;
-  background: #222;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-}
-
-.social-links {
-  margin-top: 15px;
-}
-
-.social-links a {
-  font-size: 28px;
-  margin: 0 10px;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #1da1f2; /* Twitter blue, or pick your own */
-}
-
