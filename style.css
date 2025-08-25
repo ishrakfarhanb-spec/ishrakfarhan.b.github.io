@@ -38,7 +38,6 @@ h1,h2,h3,.brand-text,.nav-link{
   grid-template-columns: max-content 1fr max-content;
   align-items: centre;
   padding: 64px 64px;
-  height: 20px
 }
 
 /* Default: desktop shows nav, hides hamburger */
