@@ -18,14 +18,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<script>
-  const btn = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  btn.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-</script>
-
 <body>
   <!-- Top blob background -->
   <div class="bg-blob"></div>
@@ -104,5 +96,14 @@ Thanks for stopping by — I hope you discover something here that sparks your o
       toggle.classList.toggle('open');
     });
   </script>
+  
+  <script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
+  
 </body>
 </html>
