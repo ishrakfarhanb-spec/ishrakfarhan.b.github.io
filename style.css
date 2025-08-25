@@ -50,11 +50,13 @@ h1,h2,h3,.brand-text,.nav-link{
 
 /* Mobile/tablet: hamburger visible, nav hidden until opened */
 @media (max-width: 1000px){
-  .site-header{
+  .site-header
+  {
     position: sticky; top: 0; z-index: 1000;   /* keep on top */
     padding: 14px 20px;                         /* tighter header on mobile */
     background: #fff;                           /* so dropdown sits on solid bg */
   }
+  
   .nav-toggle{
     display: block;
     font-size: 24px;
@@ -66,7 +68,8 @@ h1,h2,h3,.brand-text,.nav-link{
   .nav { display: none; }
 
   /* when opened via JS, show as a dropdown panel */
-  .nav.open{
+  .nav.open
+  {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -95,7 +98,7 @@ h1,h2,h3,.brand-text,.nav-link{
   font-weight:800; font-family:"Poppins",sans-serif;
 }
 
-.brand-text{ font-size:24px; }
+.brand-text{ font-size:34px; }
 .nav{ display:flex; gap:24px; justify-content:right; }
 .nav-link{ font-weight:600; font-size:16px; color:#3b4a67; }
 .nav-link:hover{ color:var(--brand); }
