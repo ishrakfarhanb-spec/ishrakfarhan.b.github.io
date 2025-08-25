@@ -63,7 +63,7 @@ h1,h2,h3,.brand-text,.nav-link{
   justify-content: flex-start;      /* content on the left */
   padding: 80px 56px;               /* room around the text */
   /* If your file name has spaces, encode them as %20 */
-  background: url("images/Website%20Home%20page.png") no-repeat right center / cover;
+  background: url("images/Website Home page.png") no-repeat right center / cover;
 }
 
 /* Optional: subtle left-to-right overlay for readability */
