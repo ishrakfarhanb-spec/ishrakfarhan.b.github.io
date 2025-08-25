@@ -136,12 +136,12 @@ h1,h2,h3,.brand-text,.nav-link{
 }
 .links a{
   display:inline-flex; align-items:center; gap:8px;
-  background:#fff; border:2px solid var(--brand);
+  background:#ff4b77; border:2px solid var(--brand);
   padding:10px 18px; border-radius:999px;
   font-weight:600; color:var(--brand);
   transition:all 0.2s ease;
 }
-.links a:hover{ background:var(--brand); color:#fff; }
+.links a:hover{ background:var(--brand); color:#ff4b77; }
 .links a i{ font-size:18px; }
 
 /* ---------- Responsive ---------- */
