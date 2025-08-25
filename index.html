@@ -1,123 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ISHRAK FARHAN BHUIYAN</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>ISHRAK</title>
+
+  <!-- Google Fonts: close match to the design -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons for the play button -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Top blob background -->
+  <div class="bg-blob"></div>
 
-  <div class="shell">
-    <!-- Header -->
-    <header class="site-header">
-      <div class="bar">
-        <h1 class="site-title">Ishrak Farhan Bhuiyan</h1>
-        <nav class="site-nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#Book reviews">Book Reviews</a>
-          <a href="#projects">Projects</a>
-          <a href="#Achievements">Achievements</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+  <header class="site-header">
+    <a class="brand" href="#">
+      <span class="brand-mark">M</span>
+      <span class="brand-text">Mitu</span>
+    </a>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <h1>Let’s turn ideas into clear, useful stories.</h1>
-          <p>
-            I write book & movie reviews, share projects, and document personal
-            milestones. This site is where curiosity meets craft—one page at a time.
-          </p>
-          <a class="btn-primary" href="#reviews">Explore Reviews</a>
-        </div>
+    <nav class="nav">
+      <a href="#" class="nav-link active">Home</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Blogs</a>
+      <a href="#" class="nav-link">Book Reviews</a>
+      <a href="#" class="nav-link">Experiences</a>
+      <a href="#" class="nav-link">Acievements</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+  </header>
 
-        <div class="hero-media">
-          <!-- Replace with your real image path -->
-          <img src="images/hero-photo.jpg" alt="Portrait of Ishrak Farhan Bhuiyan" />
-        </div>
-      </div>
-    </section>
+  <main class="hero">
+    <div class="hero-text">
+      <p class="eyebrow"><span class="dash"></span> Creative &amp; Clean</p>
 
-    <!-- About -->
-    <section class="section" id="about">
-      <h2>About</h2>
-      <p>
-        Hello, I’m <strong>Ishrak Farhan Bhuiyan</strong>. I’m interested in clear communication,
-        thoughtful design, and building small tools that make learning easier.
-        You’ll find book & film notes, project write-ups, and occasional essays here.
+      <h1 class="hero-title">
+        <span class="line-1">My Name</span>
+        <span class="line-2">Raphael</span>
+      </h1>
+
+      <p class="subtitle">
+        Hi, this is <b>Ishrak</b>.Welcome to my corner of the internet.
+This site is a reflection of the things I enjoy, explore, and create. Here you’ll find:
+<b>Book & movie reviews –</b> honest takes on the stories that inspire, challenge, or simply entertain me.
+<b>Projects –</b> academic, personal, and creative works that I’ve built along the way.
+<b>Personal events & achievements –</b> milestones, lessons, and little victories that shape who I am.
+I believe in learning continuously, sharing openly, and balancing curiosity with creativity. Whether it’s diving into a new film, unpacking a thought-provoking book, or experimenting with a fresh project, I try to connect ideas with everyday life.
+Thanks for stopping by — I hope you discover something here that sparks your own curiosity.
+
       </p>
-    </section>
-
-    <!-- Reviews -->
-    <section class="section" id="reviews">
-      <h2>Latest Reviews</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Book — Example Title</h3>
-          <p>Quick take on themes, style, and why it’s worth your time.</p>
-          <a href="#">Read review →</a>
-        </article>
-        <article class="card">
-          <h3>Movie — Example Title</h3>
-          <p>What worked, what didn’t, and the moment that stayed with me.</p>
-          <a href="#">Read review →</a>
-        </article>
-        <article class="card">
-          <h3>Mini-Essay</h3>
-          <p>A short note on making consistent progress without burnout.</p>
-          <a href="#">Read →</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="section" id="projects">
-      <h2>Projects</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Project A</h3>
-          <p>Summary of what it is, the stack, and the outcome.</p>
-          <a href="#">View project →</a>
-        </article>
-        <article class="card">
-          <h3>Project B</h3>
-          <p>Short description with a link to the repo or live demo.</p>
-          <a href="#">View project →</a>
-        </article>
-        <article class="card">
-          <h3>Achievements</h3>
-          <p>Recent milestone or award with a brief context.</p>
-          <a href="#">See more →</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <h2>Contact</h2>
-      <p>
-        Reach me at <a href="mailto:you@example.com">you@example.com</a>
-        or via <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>.
+      
+      <p class="subtitle">
+   Follow me on social handles:
       </p>
-    </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="bar">
-        <span>© 2025 Ishrak Farhan Bhuiyan</span>
-        <nav class="site-nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </footer>
-  </div>
+      <div class="links">
+  <a href="https://www.linkedin.com/in/ishrak-farhan-bhuiyan-170728229/" target="_blank">
+    <i class="fab fa-github"></i> LinkedIn
+  </a>
+  <a href="https://www.instagram.com/yup_ishrak/" target="_blank">
+    <i class="fab fa-linkedin"></i> Instagram
+  </a>
+  <a href="https://www.facebook.com/Ishrak.Farhan.B">
+    <i class="fas fa-globe"></i> Facebook
+  </a>
+</div>
 
+
+    <div class="hero-art">
+      <!-- Replace the image URL with your own asset -->
+      <img src="https://github.com/ishrakfarhanb-spec/ishrakfarhan.b.github.io/blob/main/images/IMG_20240831_032712_636.jpg" />
+      <!-- Gentle drop shadow ellipse -->
+      <span class="shadow-ellipse" aria-hidden="true"></span>
+    </div>
+  </main>
+
+  <script>
+    // Simple mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
