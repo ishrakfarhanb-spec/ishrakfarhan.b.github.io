@@ -81,3 +81,19 @@ h2, h3 {
   text-decoration: none;
   border-radius: 8px;
 }
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  font-size: 28px;
+  margin: 0 10px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #1da1f2; /* Twitter blue, or pick your own */
+}
+
