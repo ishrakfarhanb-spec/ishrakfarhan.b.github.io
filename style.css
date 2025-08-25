@@ -1,4 +1,4 @@
-<header Class="Bg">
+<header Class="hero">
 /* ===== Global (optional) ===== */
 :root{
   /* BG gradiant colours */
@@ -100,7 +100,7 @@ body{
   border-radius:50%;
   object-fit:cover;
   box-shadow:0 8px 30px rgba(0,0,0,.35);
-  border:3px solid rgba(255,255,255,.12);
+  border:10px solid rgba(255,255,255,.12);
 }
 
 /* Make sure text stays readable atop dark bg */
