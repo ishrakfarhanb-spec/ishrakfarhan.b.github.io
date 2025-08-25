@@ -38,7 +38,23 @@ h1,h2,h3,.brand-text,.nav-link{
   grid-template-columns: max-content 1fr max-content;
   align-items: centre;
   padding: 64px 64px;
-  height: 40px
+  height: 20px
+}
+
+.nav-toggle
+{
+  display:none;
+  font-size:24px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+@media(max-width:1000px)
+{
+  .nav{ display:none; flex-direction:column; gap:12px; }
+  .nav.open{ display:flex; }
+  .nav-toggle{ display:block; }
 }
 
 .brand
