@@ -1,10 +1,13 @@
+/* ---------- Fonts (bring them back) ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;600;700&display=swap');
+
 /* ---------- CSS Reset ---------- */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 
-/* ---------- Theme Colors ---------- */
+/* ---------- Theme ---------- */
 :root{
   --bg: #f4f7fb;
   --ink: #0b1635;
@@ -17,10 +20,15 @@ a { text-decoration: none; color: inherit; }
 
 /* ---------- Base ---------- */
 body{
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(90deg, #f4f7fb 0%, #f7f9fd 50%, #f1f5fb 100%);
   overflow-x: hidden;
+}
+
+/* Headings use Poppins like the mockup */
+h1,h2,h3,.brand-text,.nav-link{
+  font-family: "Poppins", sans-serif;
 }
 
 /* ---------- Header ---------- */
@@ -37,7 +45,7 @@ body{
   display:flex; justify-content:center; align-items:center;
   font-weight:800; font-family:"Poppins",sans-serif;
 }
-.brand-text{ font-family:"Poppins",sans-serif; font-size:22px; }
+.brand-text{ font-size:22px; }
 .nav{ display:flex; gap:24px; justify-content:center; }
 .nav-link{ font-weight:600; font-size:16px; color:#3b4a67; }
 .nav-link:hover{ color:var(--brand); }
@@ -46,18 +54,65 @@ body{
   color:#fff; padding:10px 20px; border-radius:999px; font-weight:700;
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero with background photo ---------- */
 .hero{
-  background: url("images/Website Home page.png") no-repeat center center;
-  background-size: cover;      /* makes it fill the whole area */
-  background-attachment: fixed;/* optional: keeps bg fixed while scrolling */
-  width: 100%;
-  height: 100vh;               /* full viewport height */
-  display: flex;               /* optional: for centering content */
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  min-height: 100vh;               /* full viewport */
+  display: flex;
+  align-items: flex-start;          /* content from the top */
+  justify-content: flex-start;      /* content on the left */
+  padding: 80px 56px;               /* room around the text */
+  /* If your file name has spaces, encode them as %20 */
+  background: url("images/Website%20Home%20page.png") no-repeat right center / cover;
 }
 
+/* Optional: subtle left-to-right overlay for readability */
+.hero::before{
+  content:"";
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.55) 36%, rgba(255,255,255,.10) 70%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+}
+
+/* Boxed description area (no border) in the left corner */
+.hero-text{
+  position: relative;               /* above the overlay */
+  z-index: 1;
+  max-width: 680px;
+  padding: 24px 28px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.88);/* “boxed” look without a border */
+  box-shadow: var(--shadow);
+}
+
+/* Eyebrow/heading styles (optional, match the mockup feel) */
+.eyebrow{
+  font-family:"Poppins",sans-serif;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-weight:700;
+  color:#3a4670;
+  margin:0 0 8px 0;
+}
+.hero-title{ margin:0 0 10px 0; line-height:1.05; }
+.hero-title .line-1{
+  display:block; text-transform:uppercase;
+  font-weight:800; color:var(--brand);
+  font-size:clamp(36px,6vw,74px);
+}
+.hero-title .line-2{
+  display:block; text-transform:uppercase;
+  font-weight:900; color:var(--accent);
+  font-size:clamp(40px,6.2vw,78px);
+}
+
+.subtitle{
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 14px 0 18px 0;
+  text-align: justify;              /* <— justified as requested */
+}
 
 /* ---------- Buttons ---------- */
 .btn{
@@ -77,25 +132,32 @@ body{
 
 /* ---------- Links Section (under bio) ---------- */
 .links{
-  margin:20px 0;
-  display:flex; gap:16px; flex-wrap:wrap;
+  margin:18px 0 6px 0;
+  display:flex; gap:14px; flex-wrap:wrap;
 }
 .links a{
   display:inline-flex; align-items:center; gap:8px;
   background:#fff; border:2px solid var(--brand);
-  padding:10px 20px; border-radius:999px;
+  padding:10px 18px; border-radius:999px;
   font-weight:600; color:var(--brand);
   transition:all 0.2s ease;
 }
-.links a:hover{
-  background:var(--brand); color:#fff;
-}
-.links a i{
-  font-size:18px;
-}
+.links a:hover{ background:var(--brand); color:#fff; }
+.links a i{ font-size:18px; }
 
 /* ---------- Responsive ---------- */
-@media(max-width:1000px){
-  .hero{ grid-template-columns:1fr; text-align:center; }
+@media (max-width: 1000px){
   .nav{ display:none; }
+  .hero{
+    padding: 56px 20px;
+    background-position: center;    /* center bg on small screens */
+  }
+  .hero::before{
+    background: rgba(255,255,255,.9); /* stronger overlay for small screens */
+  }
+  .hero-text{
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+  }
 }
