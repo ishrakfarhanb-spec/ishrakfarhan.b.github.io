@@ -1,56 +1,82 @@
-/* ---------- Theme (GREY) ---------- */
+/* Wilderness-like display font (free, Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+/* ---------------- Theme tokens ---------------- */
 :root{
-  --bg-0: #1a1a1a;   /* deepest */
-  --bg-1: #232323;   /* base */
-  --bg-2: #2f2f2f;   /* mid */
-  --bg-3: #3b3b3b;   /* lightest ridge */
-  --text: #f2f2f2;
-  --muted: #cfcfcf;
+  --bg-0: #B4B4B4;   /* page background (near black) */
+  --bg-1: #909090;   /* hero base */
+  --bg-2: #636363;   /* mid ridge */
+  --bg-3: #494848;   /* top ridge */
+  --text: #f2f2f2;   /* primary */
+  --muted: #cfcfcf;  /* secondary */
+  --line: #2e2e2e;   /* hairlines */
+  --link: #7ab7ff;   /* accessible blue */
   --glow: rgba(255,255,255,.06);
-  --accent: #e6e6e6; /* button/text accent */
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
+/* ---------------- Base ---------------- */
+*{ box-sizing:border-box }
+html,body{ height:100% }
 body{
   margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  color: var(--text);
   background: var(--bg-0);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  line-height: 1.6;
 }
 
-/* ---------- Header (smaller) ---------- */
-.site-header{
-  position: sticky; top: 0;
-  background: rgba(20,20,20,.8);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid #2b2b2b;
-  padding: 8px 0;                  /* <-- smaller height */
-  z-index: 10;
-}
-.site-title{
-  font-size: 1.1rem;               /* smaller title */
-  margin: 0;
-  font-weight: 600;
-}
-.site-nav a{
-  color: var(--muted);
-  text-decoration: none;
-  margin-left: 16px;
-  font-size: .95rem;               /* smaller links */
-}
-.site-nav a:hover{ color: #fff }
+/* Headings (sections) default to body font; override below if needed */
+h1,h2,h3,h4,h5,h6{ color: var(--text); margin-top: 0 }
 
+/* Links */
+a{ color: var(--link); text-decoration: none }
+a:hover{ text-decoration: underline }
+
+/* General layout container */
 .container{
   width:min(1100px, 92vw);
-  margin:0 auto;
+  margin-inline:auto;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap: 16px;
+  gap:16px;
 }
 
-/* ---------- HERO with layered grey "hills" ---------- */
+/* ---------------- Header & Footer ---------------- */
+/* Use .site-header and (optionally) .site-footer in your HTML */
+.site-header, .site-footer{
+  padding: 10px 0;            /* same height for both */
+  background: rgba(10,10,10,.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header{ position: sticky; top:0; z-index: 20 }
+.site-footer{ border-top: 1px solid var(--line); border-bottom: none }
+
+/* Site title: Times New Roman, NOT bold */
+.site-title{
+  font-family: "Times New Roman", Times, serif;
+  font-weight: normal;        /* removes bold */
+  font-size: 1.35rem;
+  letter-spacing: .1px;
+  margin: 0;
+  color: var(--text);
+}
+
+/* Header navigation: wilderness vibe */
+.site-nav a{
+  font-family: "Yeseva One", serif;
+  font-weight: normal;
+  font-size: 0.98rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-left: 16px;
+  text-decoration: none;
+}
+.site-nav a:hover{ color: #ffffff }
+
+/* ---------------- Hero with layered hills ---------------- */
 .hero{
   position: relative;
   overflow: hidden;
@@ -59,9 +85,9 @@ body{
   align-items: center;
   background:
     radial-gradient(1400px 700px at 22% 18%, var(--glow) 0 35%, transparent 60%),
-    linear-gradient(180deg, var(--bg-1) 0%, #1e1e1e 55%, var(--bg-0) 100%);
+    linear-gradient(180deg, var(--bg-1) 0%, #141414 55%, var(--bg-0) 100%);
   isolation: isolate;
-  border-radius: 0;                 /* no roundness */
+  border-radius: 0; /* ensure no rounding */
 }
 
 /* Ridge 1 */
@@ -69,14 +95,13 @@ body{
   content:"";
   position:absolute; inset:0;
   background:
-    linear-gradient(0deg, transparent 0 10%, rgba(255,255,255,.02) 60%, transparent 100%),
+    linear-gradient(0deg, transparent 0 10%, rgba(255,255,255,.03) 60%, transparent 100%),
     linear-gradient(180deg, var(--bg-2), var(--bg-1));
   clip-path: polygon(
     0% 32%, 10% 28%, 22% 34%, 34% 27%, 48% 33%,
     62% 26%, 78% 31%, 100% 22%, 100% 100%, 0% 100%
   );
-  opacity:.9;
-  z-index:-1;
+  opacity:.9; z-index:-1;
 }
 
 /* Ridge 2 */
@@ -88,60 +113,64 @@ body{
     0% 55%, 14% 48%, 26% 54%, 40% 47%, 55% 52%,
     70% 45%, 86% 50%, 100% 43%, 100% 100%, 0% 100%
   );
-  opacity:.75;
-  z-index:-1;
+  opacity:.8; z-index:-1;
 }
 
-/* ---------- Profile layout ---------- */
+/* ---------------- Profile layout ---------------- */
 .profile{
   display:grid;
   grid-template-columns: 260px 1fr;
   gap: 32px;
   width: 100%;
-  border-radius: 0;                /* ensure no roundness */
 }
-.profile-left{
-  text-align:center;
-}
+.profile-left{ text-align:center }
 .profile-right h2{ margin-top:0 }
-.profile-right p{ color: #e6e6e6; line-height: 1.6 }
+.profile-right p{ color: var(--muted) }
 
 .profile-pic{
-  width: 160px; height: 160px;
-  border-radius: 50%;              /* keep avatar round */
-  object-fit: cover;
+  width:160px; height:160px;
+  border-radius:50%;
+  object-fit:cover;
   border: 3px solid rgba(255,255,255,.12);
-  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+  box-shadow: 0 8px 24px rgba(0,0,0,.5);
+  margin-top: 8px; /* nudge down if needed */
 }
 
+/* Social icons */
 .social-links a{
   display:inline-flex;
   width:36px;height:36px;
   align-items:center;justify-content:center;
   margin: 0 6px;
-  color:#fff;background:#2a2a2a;border-radius:50%;
-  text-decoration:none;border:1px solid #3a3a3a;
+  color:#fff;
+  background:#222;
+  border:1px solid #333;
+  border-radius:50%;
 }
-.social-links a:hover{ background:#3a3a3a }
+.social-links a:hover{ background:#2b2b2b }
 
+/* Buttons (e.g., Download CV) */
 .btn{
   display:inline-block;
-  background: #2c2c2c;
-  color: var(--accent);
-  border: 1px solid #3a3a3a;
-  padding: 10px 14px;
-  border-radius: 8px;
+  background:#1e1e1e;
+  color:#f7f7f7;
+  border:1px solid #2f2f2f;
+  padding:10px 14px;
+  border-radius:8px;
   text-decoration:none;
 }
-.btn:hover{ background:#3a3a3a }
+.btn:hover{ background:#262626 }
 
 /* Lists */
-.interests ul, .education ul{ padding-left: 18px; }
-.interests li, .education li{ margin: 6px 0; color: #dddddd }
+.interests ul, .education ul{ padding-left: 18px }
+.interests li, .education li{ margin: 6px 0; color: var(--text) }
 
-/* ---------- Responsive ---------- */
+/* ---------------- Utilities ---------------- */
+hr{ border:none; border-top:1px solid var(--line); margin:24px 0 }
+
+/* ---------------- Responsive ---------------- */
 @media (max-width: 900px){
-  .profile{ grid-template-columns: 1fr; text-align: left; }
-  .profile-left{ text-align: left; }
-  .site-nav{ display:none; } /* optional collapse on mobile */
+  .profile{ grid-template-columns: 1fr }
+  .profile-left{ text-align:left }
+  .site-nav{ display:none }   /* collapse top menu on mobile */
 }
