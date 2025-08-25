@@ -35,7 +35,7 @@ h1,h2,h3,.brand-text,.nav-link{
 .site-header{
   display: grid;
   grid-template-columns: max-content 1fr max-content;
-  align-items: center;
+  align-items: right;
   padding: 24px 56px;
 }
 .brand{ display:flex; align-items:center; gap:10px; font-weight:700; }
