@@ -1,12 +1,12 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0b3d2e;
+  background: #343434;
   color: white;
 }
 
 header {
-  background: #0a2f23;
+  background: #353839;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
