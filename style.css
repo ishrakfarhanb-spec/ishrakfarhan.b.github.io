@@ -98,7 +98,7 @@ h1,h2,h3,.brand-text,.nav-link{
   font-weight:800; font-family:"Poppins",sans-serif;
 }
 
-.brand-text{ font-size:34px; }
+.brand-text{ font-size:24px; }
 .nav{ display:flex; gap:24px; justify-content:right; }
 .nav-link{ font-weight:600; font-size:16px; color:#3b4a67; }
 .nav-link:hover{ color:var(--brand); }
