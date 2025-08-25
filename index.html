@@ -17,6 +17,15 @@
   <!-- Custom stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+</script>
+
 <body>
   <!-- Top blob background -->
   <div class="bg-blob"></div>
