@@ -48,23 +48,10 @@ body{
 
 /* ---------- Hero ---------- */
 .hero{
-  display:grid; grid-template-columns:1.2fr 1fr;
-  align-items:center; gap:24px; padding:40px 56px;
+  background: url("assets/your-photo.jpg") no-repeat center center / cover;
+  color: #fff; /* switch to white text if bg is dark */
 }
-.hero-title .line-1{
-  font-family:"Poppins",sans-serif; font-weight:800;
-  font-size:clamp(36px,6vw,74px); text-transform:uppercase;
-  color:var(--brand);
-}
-.hero-title .line-2{
-  font-family:"Poppins",sans-serif; font-weight:900;
-  font-size:clamp(40px,6vw,78px); text-transform:uppercase;
-  color:var(--accent);
-}
-.subtitle{
-  color:var(--muted); font-size:18px; line-height:1.7;
-  margin:16px 0 20px 0;
-}
+
 
 /* ---------- Buttons ---------- */
 .btn{
