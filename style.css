@@ -1,1 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b3d2e;
+  color: white;
+}
 
+header {
+  background: #0a2f23;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.profile {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+.profile-left {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.profile-right {
+  flex: 2;
+  background: #124734;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
