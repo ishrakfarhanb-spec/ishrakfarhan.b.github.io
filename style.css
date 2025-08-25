@@ -1,11 +1,11 @@
 <header Class="Bg">
 /* ===== Global (optional) ===== */
 :root{
-  /* Tweak these to nudge the look */
-  --bg-0: #0b2f28;   /* deepest green */
-  --bg-1: #0e3a31;   /* base */
-  --bg-2: #10463b;   /* mid */
-  --bg-3: #155c4d;   /* lightest ridge */
+  /* BG gradiant colours */
+  --bg-0: #1a1a1a;   /* deepest grey */
+  --bg-1: #2a2a2a;   /* base */
+  --bg-2: #3a3a3a;   /* mid */
+  --bg-3: #4a4a4a;   /* lightest ridge */
   --glow: rgba(255,255,255,.05);
 }
 
