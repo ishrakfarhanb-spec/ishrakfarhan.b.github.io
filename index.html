@@ -22,14 +22,14 @@
   <!-- Top blob background -->
   <div class="bg-blob"></div>
 
-  <header class="site-header">
-    <a class="brand" href="#">
-      <span class="brand-mark">I</span>
-      <span class="brand-text">ISHRAK</span>
-    </a>
+ <header class="site-header">
+  <a class="brand" href="index.html">
+  <span class="brand-mark">M</span><span class="brand-text">Mitu</span>
+  </a>
 
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-    <nav class="nav">
+  <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+  <nav id="site-nav" class="nav">
+
       <a href="#" class="nav-link active">Home</a>
       <a href="#" class="nav-link">About</a>
       <a href="#" class="nav-link">Projects</a>
@@ -98,11 +98,14 @@ Thanks for stopping by — I hope you discover something here that sparks your o
   </script>
   
   <script>
-  const btn = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  btn.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
+          const btn = document.querySelector('.nav-toggle');
+          const nav = document.querySelector('.nav');
+          btn.addEventListener('click', () => 
+            {
+            nav.classList.toggle('open');
+            const opened = nav.classList.contains('open');
+            btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+            });
 </script>
   
 </body>
