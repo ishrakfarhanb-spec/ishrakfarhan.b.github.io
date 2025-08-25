@@ -2,87 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ishrak Farhan Bhuiyan</title>
-
-  <!-- Styles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ISHRAK FARHAN BHUIYAN</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
-
 <body>
-  <!-- Top navigation header (smaller) -->
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Home</h1>
-      <nav class="site-nav">
-        <a href="#">Bio</a>
-        <a href="#">Blogs</a>
-        <a href="#">Book Reviews</a>
-        <a href="#">Music</a>
-        <a href="#">Experience</a>
-        <a href="#">Projects</a>
-        <a href="#">Acievements</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero with “hills” -->
-  <section class="hero">
-    <div class="container">
-      <section class="profile">
-        <div class="profile-left">
-          <img src="images/IMG_20240831_032712_636.jpg" alt="Your Photo" class="profile-pic" />
-          <h2>Ishrak Farhan Bhuiyan</h2>
-          <h3>Student</h3>
-          <p>University of Dhaka</p>
+  <div class="shell">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="bar">
+        <h1 class="site-title">Ishrak Farhan Bhuiyan</h1>
+        <nav class="site-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#Book reviews">Book Reviews</a>
+          <a href="#projects">Projects</a>
+          <a href="#Achievements">Achievements</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/ishrak-farhan-bhuiyan-170728229/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/yup_ishrak/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/Ishrak.Farhan.B/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          </div>
-        </div>
-
-        <div class="profile-right">
-          <h2>About Me</h2>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1>Let’s turn ideas into clear, useful stories.</h1>
           <p>
-            Hello,this is <b>Ishrak</b>. Welcome to my corner of the internet.This site is a reflection of the things I enjoy, explore, and create. Here you’ll find:
-
-<br><br>Book & movie reviews – honest takes on the stories that inspire, challenge, or simply entertain me.
-<br><br>Projects – academic, personal, and creative works that I’ve built along the way.
-<br><br>Personal events & achievements – milestones, lessons, and little victories that shape who I am.
-<br><br>I believe in learning continuously, sharing openly, and balancing curiosity with creativity. Whether it’s diving into a new film, unpacking a thought-provoking book, or experimenting with a fresh project, I try to connect ideas with everyday life.
-Thanks for stopping by — I hope you discover something here that sparks your own curiosity.
-            <br><br>
-            Thanking you,<br>
-            <b>ISHRAK FARHAN BHUIYAN</b>
+            I write book & movie reviews, share projects, and document personal
+            milestones. This site is where curiosity meets craft—one page at a time.
           </p>
-
-          <a href="cv.pdf" class="btn">📄 Download CV</a>
-
-          <div class="interests">
-            <h3>Interests</h3>
-            <ul>
-              <li>Artificial Intelligence</li>
-              <li>Computational Linguistics</li>
-              <li>Information Retrieval</li>
-            </ul>
-          </div>
-
-          <div class="education">
-            <h3>Education</h3>
-            <ul>
-              <li><b>Bachelor of Business Administration (BBA)</b> – University of Dhaka</li>
-              <li><b>Professional Actuarial Study Scholarship</b> – Institute and Faculty of Actuaries</li>
-              <li><b>Higher Secondary School Certificate</b> – Dhaka College</li>
-              <li><b>Secondary School Certificate</b> – Ideal School and College, Motijheel-1000</li>
-            </ul>
-          </div>
+          <a class="btn-primary" href="#reviews">Explore Reviews</a>
         </div>
-      </section>
-    </div>
-  </section>
+
+        <div class="hero-media">
+          <!-- Replace with your real image path -->
+          <img src="images/hero-photo.jpg" alt="Portrait of Ishrak Farhan Bhuiyan" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <h2>About</h2>
+      <p>
+        Hello, I’m <strong>Ishrak Farhan Bhuiyan</strong>. I’m interested in clear communication,
+        thoughtful design, and building small tools that make learning easier.
+        You’ll find book & film notes, project write-ups, and occasional essays here.
+      </p>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section" id="reviews">
+      <h2>Latest Reviews</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Book — Example Title</h3>
+          <p>Quick take on themes, style, and why it’s worth your time.</p>
+          <a href="#">Read review →</a>
+        </article>
+        <article class="card">
+          <h3>Movie — Example Title</h3>
+          <p>What worked, what didn’t, and the moment that stayed with me.</p>
+          <a href="#">Read review →</a>
+        </article>
+        <article class="card">
+          <h3>Mini-Essay</h3>
+          <p>A short note on making consistent progress without burnout.</p>
+          <a href="#">Read →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Project A</h3>
+          <p>Summary of what it is, the stack, and the outcome.</p>
+          <a href="#">View project →</a>
+        </article>
+        <article class="card">
+          <h3>Project B</h3>
+          <p>Short description with a link to the repo or live demo.</p>
+          <a href="#">View project →</a>
+        </article>
+        <article class="card">
+          <h3>Achievements</h3>
+          <p>Recent milestone or award with a brief context.</p>
+          <a href="#">See more →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>
+        Reach me at <a href="mailto:you@example.com">you@example.com</a>
+        or via <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="bar">
+        <span>© 2025 Ishrak Farhan Bhuiyan</span>
+        <nav class="site-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
 </body>
 </html>
