@@ -37,7 +37,8 @@ h1,h2,h3,.brand-text,.nav-link{
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   align-items: centre;
-  padding: 34px 34px;
+  padding: 64px 64px;
+  height: 40px
 }
 
 .brand
