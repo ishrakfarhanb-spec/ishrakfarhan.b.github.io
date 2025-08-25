@@ -37,19 +37,21 @@ h1,h2,h3,.brand-text,.nav-link{
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   align-items: centre;
-  padding: 28px 48px;
+  padding: 16px 32px;
 }
 
 /* Default: desktop shows nav, hides hamburger */
 .nav-toggle { display: none; }
 
-@media (min-width: 1001px){
+@media (min-width: 1001px)
+{
   .nav { display: flex; gap: 24px; align-items: center; }
   .nav-toggle { display: none; }          /* ensure hidden on wide screens */
 }
 
 /* Mobile/tablet: hamburger visible, nav hidden until opened */
-@media (max-width: 1000px){
+@media (max-width: 1000px)
+{
   .site-header
   {
     position: sticky; top: 0; z-index: 1000;   /* keep on top */
@@ -57,7 +59,8 @@ h1,h2,h3,.brand-text,.nav-link{
     background: #fff;                           /* so dropdown sits on solid bg */
   }
   
-  .nav-toggle{
+  .nav-toggle
+  {
     display: block;
     font-size: 24px;
     background: none; border: none; cursor: pointer;
