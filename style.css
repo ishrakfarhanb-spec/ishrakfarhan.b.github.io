@@ -37,6 +37,9 @@ h1,h2,h3,.brand-text,.nav-link
 /* ---------- Header ---------- */
 .site-header
 {
+  position: relative;
+  z-index:1001;
+  background:var(--bg)
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   align-items: center;
