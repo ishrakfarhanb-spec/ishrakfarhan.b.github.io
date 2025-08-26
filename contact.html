@@ -11,21 +11,23 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* --- Form Card (Feedback style) --- */
-    
-    .feedback-card 
-    {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      padding: 32px 28px;
-      width: 100%;
-      max-width: 450px;
-      margin: 24px auto;
+    /* Force absolute white page bg */
+    body {
+      background: #ffffff !important;
     }
 
-    .feedback-card h2 
-    {
+    /* Form as white card with shadow, no border */
+    form {
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border: none; /* remove any thin line */
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.5); /* subtle shadow only */
+    }
+
+    form h2 {
       text-align: center;
       margin-bottom: 30px;
       font-family: "Poppins", sans-serif;
@@ -33,44 +35,38 @@
       color: var(--ink);
     }
 
-    .feedback-card label 
-    {
+    form label {
       display: block;
       margin-bottom: 6px;
       font-weight: 600;
       text-align: left;
     }
 
-    .feedback-card input,
-    .feedback-card textarea 
-    {
+    form input,
+    form textarea {
       width: 100%;
       padding: 12px 14px;
       margin-bottom: 16px;
-      border: none;
-      border-radius: 24px;
+      border: 1px solid var(--muted); /* keep borders for fields */
+      border-radius: 6px;
       background: #ffffff;
       font-size: 0.95rem;
       outline: none;
       transition: box-shadow 0.2s;
     }
 
-    .feedback-card input:focus,
-    .feedback-card textarea:focus 
-    {
+    form input:focus,
+    form textarea:focus {
       box-shadow: 0 0 0 2px var(--brand);
-      background: ;
+      background: #fff;
     }
 
-    .feedback-card textarea 
-    {
-      border-radius: 12px;
-      font:"arial";
+    form textarea {
+      border-radius: 6px;
       resize: vertical;
     }
 
-    .feedback-card button 
-    {
+    form button {
       width: 100%;
       background: #f0a2b5; /* pink submit button */
       color: #ffffff;
@@ -83,13 +79,11 @@
       transition: background 0.3s;
     }
 
-    .feedback-card button:hover 
-    {
+    form button:hover {
       background: #ff4f79;
     }
 
-    .contact-info 
-    {
+    .contact-info {
       text-align: center;
       margin-top: 16px;
       font-size: 0.95rem;
@@ -99,7 +93,7 @@
 </head>
 
 <body>
- <!-- HEADER (same as home) -->
+  <!-- HEADER (unchanged, keeps bg from style.css vars) -->
   <header class="site-header">
     <a class="brand" href="index.html">
       <span class="brand-mark">I</span><span class="brand-text">ISHRAK</span>
@@ -124,24 +118,23 @@
 
   <!-- FEEDBACK FORM -->
   <section>
-    <div class="feedback-card">
+    <form>
       <h2>FEEDBACK FORM</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter Name" required />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter email" required />
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter Name" required />
 
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter email" required />
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Enter message" rows="5" required></textarea>
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
 
-        <button type="submit">Submit →</button>
-      </form>
-    </div>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Enter message" rows="5" required></textarea>
+
+      <button type="submit">Submit →</button>
+    </form>
 
     <!-- CONTACT INFO -->
     <div class="contact-info">
@@ -150,8 +143,9 @@
     </div>
   </section>
 
-  <!-- FOOTER (same as home) -->
-  <br><br><footer>
+  <!-- FOOTER -->
+  <br><br>
+  <footer>
     <div class="footer-links">
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
