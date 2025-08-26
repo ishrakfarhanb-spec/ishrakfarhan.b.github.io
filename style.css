@@ -274,26 +274,26 @@ form
 /* ---------- Footer ---------- */
 footer 
 {
-  width: 100%;
   background-color: var(--bg);   /* matches your header tone */
   color: var(--ink);               /* text in light color */
-  padding: 10px 10px;
+  padding: 4px 0px;
   text-align: center;
-  font-size: 0.9rem;
-  margin-top: 3px;
+  font-size: 0.85rem;
+  margin-top: 4px;
 }
 
 footer .footer-links 
 {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
+  padding: 4px 0;
 }
 
 footer .footer-links a 
 {
   color: var(--ink);               /* links same as footer text */
-  margin: 0 30px;
+  margin: 0 19px;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: color 0.3s ease;
 }
 
@@ -304,10 +304,10 @@ footer .footer-links a:hover
 
 footer .footer-bottom 
 {
+  margin: 0;
   border-top: 1px solid var(--muted); /* subtle line */
-  padding: 1px;
+  padding: 0px;
   font-size: 0.9rem;
+  line-height: .2;
   opacity: 0.8;
 }
-
-
