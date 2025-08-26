@@ -55,25 +55,38 @@ h1,h2,h3,.brand-text,.nav-link
 /* Mobile/tablet: hamburger visible, nav hidden until opened */
 @media (max-width: 1000px)
 {
-  .site-header { position: sticky; top: 0; z-index: 1000; padding: 14px 20px; background: #fff; }
-  .nav-toggle { display: block; font-size: 24px; background: none; border: none; cursor: pointer; margin-left: auto; }
+  .site-header
+  {
+    position: sticky; top: 0; z-index: 1000;   /* keep on top */
+    padding: 14px 20px;                         /* tighter header on mobile */
+    background: #fff;                           /* so dropdown sits on solid bg */
+  }
+  
+  .nav-toggle
+  {
+    display: block;
+    font-size: 24px;
+    background: none; border: none; cursor: pointer;
+    margin-left: auto;                          /* push button to the right */
+  }
 
-  /* force collapse on mobile regardless of later rules */
-  .nav { display: none !important; }
+  /* start hidden on mobile */
+  .nav { display: none; }
 
-  /* show only when toggled open */
-  .nav.open {
-    display: flex !important;
+  /* when opened via JS, show as a dropdown panel */
+  .nav.open
+  {
+    display: flex;
     flex-direction: column;
     gap: 12px;
     position: absolute;
-    left: 16px; right: 16px; top: 100%;
+    left: 16px; right: 16px; top: 100%;         /* below the header */
     padding: 14px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    max-height: 70vh;
-    overflow: auto;
+    max-height: 70vh;                           /* if many items… */
+    overflow: auto;                             /* …scroll instead of cutting off */
     z-index: 1001;
   }
 
