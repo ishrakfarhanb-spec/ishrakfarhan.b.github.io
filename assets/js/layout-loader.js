@@ -1,22 +1,21 @@
-const SHARED_BASE = "https://ishrakfarhanb-spec.github.io";
+// PROJECT SITE base (your Pages URL path)
+const SHARED_BASE = "https://ishrakfarhanb-spec.github.io/ishrakfarhan.b.github.io";
 
-async function injectFragment(place, name) {
-  const el = document.querySelector(`[data-include="${place}"]`);
-  if (!el) return;
-  const base = SHARED_BASE || "";
-  const url = `${base}/shared/${name}.html`;
+async function inject(place, name) {
+  const mount = document.querySelector(`[data-include="${place}"]`);
+  if (!mount) return;
+  const url = `${SHARED_BASE}/shared/${name}.html`;
   try {
     const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const html = await res.text();
-    el.innerHTML = html;
+    mount.innerHTML = await res.text();
     document.dispatchEvent(new CustomEvent(`${place}:loaded`, { detail: { url } }));
-  } catch (err) {
-    console.error(`Failed to load ${place} from ${url}:`, err);
+  } catch (e) {
+    console.error(`[layout-loader] Failed to load ${place} from ${url}`, e);
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  injectFragment("header", "header");
-  injectFragment("footer", "footer");
+  inject("header", "header");
+  inject("footer", "footer");
 });
