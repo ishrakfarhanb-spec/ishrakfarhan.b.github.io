@@ -311,3 +311,15 @@ footer .footer-bottom
   line-height: .2;
   opacity: 0.8;
 }
+
+header.site-header {
+  background: var(--bg);   /* keep header same as footer */
+}
+
+footer {
+  background: var(--bg);   /* match header color */
+  color: var(--ink);
+  text-align: center;
+  padding: 6px 0;
+  font-size: 0.85rem;
+}
