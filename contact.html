@@ -5,57 +5,112 @@
   <meta name="viewport" content="width=device-width, initial-scale=1", viewport-fit=cover />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="style.css?v=4" rel="stylesheet" />
+  <title>Contact Form</title>
+  <style>
+    /* ---------- CSS Reset ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <title>ISHRAK</title>
+    body 
+    {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-  <!-- Google Fonts: close match to the design -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    .contact-form 
+    {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
 
-  <!-- Icons for the play button -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    .contact-form h2 
+    {
+      font-size: 22px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #0b1635;
+    }
 
-  <!-- Custom stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+    .contact-form p 
+    {
+      font-size: 14px;
+      color: #6c7a91;
+      margin-bottom: 20px;
+    }
+
+    .contact-form label 
+    {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #0b1635;
+    }
+
+    .contact-form input,
+    .contact-form textarea 
+    {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .contact-form textarea 
+    {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .contact-form button 
+    {
+      width: 100%;
+      padding: 12px;
+      background: #3b2cf2;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover 
+    {
+      background: #f4f7fb;
+    }
+  </style>
 </head>
-
 <body>
-  <header>
-    <nav>      
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="https://github.com/projects?query=is%3Aopen+creator%3A%40me" class="nav-link">Projects</a>
-      <a href="https://www.goodreads.com/review/drafts" class="nav-link">Book Reviews</a>
-      <a href="creative.html" class="nav-link">Creative</a>
-      <a href="experience.html" class="nav-link">Experiences</a>
-      <a href="acievements.html" class="nav-link">Acievements</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
-  </header>
+  <div class="contact-form">
+    <h2>Get in Touch</h2>
+    <p>Fill out the form to convet feed in order to assist me improvising the site</p>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
 
-  <main class="hero">
-    <h1>Contact</h1>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <p>
-      <label>Full Name
-      <input type="text" name="name" required>
-      </label>
-      </p>
-      <p>
-      <label>Email
-      <input type="email" name="email" required>
-      </label>
-      </p>
-      <p>
-      <label>Message
-      <textarea name="message" rows="6" required></textarea>
-      </label>
-      </p>
-      <button type="submit">Send</button>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="+1 (234) 56789" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message" required></textarea>
+
+      <button type="submit">Send Message</button>
     </form>
-  </main>
-
-  <footer>
-    <small>© 2025 ISHRAK FARHAN BHUIYAN - All rights reserved</small>
-  </footer>
+  </div>
 </body>
 </html>
