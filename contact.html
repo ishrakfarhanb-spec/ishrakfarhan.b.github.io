@@ -68,7 +68,7 @@
 
     form button {
       width: 100%;
-      background: #2445f1; /* blue submit button */
+      background: #2445f1; /* pink submit button */
       color: #ffffff;
       padding: 12px;
       font-size: 1rem;
@@ -93,7 +93,7 @@
 </head>
 
 <body>
-  <!-- HEADER -->
+  <!-- HEADER (unchanged, keeps bg from style.css vars) -->
   <header class="site-header">
     <a class="brand" href="index.html">
       <span class="brand-mark">I</span><span class="brand-text">ISHRAK</span>
@@ -157,20 +157,22 @@
     </div>
   </footer>
 
-  <!-- Single robust hamburger script -->
+  <!-- Nav toggle JS -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const btn = document.querySelector(".nav-toggle");
-      const nav = document.getElementById("site-nav");
-      if (!btn || !nav) return;
-
-      btn.addEventListener("click", () => {
-        nav.classList.toggle("open");
-        btn.setAttribute(
-          "aria-expanded",
-          nav.classList.contains("open") ? "true" : "false"
-        );
-      });
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  </script>
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav2 = document.querySelector('.nav');
+    btn.addEventListener('click', () => {
+      nav2.classList.toggle('open');
+      const opened = nav2.classList.contains('open');
+      btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
     });
   </script>
 </body>
