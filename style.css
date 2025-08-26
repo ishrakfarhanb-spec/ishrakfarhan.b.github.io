@@ -39,7 +39,7 @@ h1,h2,h3,.brand-text,.nav-link
 {
   position: relative;
   z-index:1001;
-  background:var(--bg)
+  background:var(--bg);
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   align-items: center;
@@ -277,7 +277,7 @@ form
 /* ---------- Footer ---------- */
 footer 
 {
-  background-color: var(--bg);   /* matches your header tone */
+  background: var(--bg);           /* match header color */
   color: var(--ink);               /* text in light color */
   padding: 4px 0px;
   text-align: center;
@@ -315,9 +315,6 @@ footer .footer-bottom
   opacity: 0.8;
 }
 
-header.site-header {
-  background: var(--bg);   /* keep header same as footer */
-}
 
 footer {
   background: var(--bg);   /* match header color */
