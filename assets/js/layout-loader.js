@@ -1,4 +1,4 @@
-const SHARED_BASE = "https://github.com/ishrakfarhanb-spec/ishrakfarhan.b.github.io";
+const SHARED_BASE = "https://ishrakfarhanb-spec.github.io";
 
 async function injectFragment(place, name) {
   const el = document.querySelector(`[data-include="${place}"]`);
