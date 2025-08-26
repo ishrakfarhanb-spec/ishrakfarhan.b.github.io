@@ -49,7 +49,7 @@ h1,h2,h3,.brand-text,.nav-link
 @media (min-width: 1001px)
 {
   .nav { display: flex; gap: 24px; align-items: center; }
-  .nav-toggle { display: none; }          /* ensure hidden on wide screens */
+  .nav-toggle { display: none; }
 }
 
 /* Mobile/tablet: hamburger visible, nav hidden until opened */
@@ -57,38 +57,22 @@ h1,h2,h3,.brand-text,.nav-link
 {
   .site-header
   {
-    position: sticky; top: 0; z-index: 1000;   /* keep on top */
-    padding: 14px 20px;                         /* tighter header on mobile */
-    background: #fff;                           /* so dropdown sits on solid bg */
+    position: sticky; top: 0; z-index: 1000;
+    padding: 14px 20px;
+    background: #fff;
   }
-  
+
   .nav-toggle
   {
     display: block;
     font-size: 24px;
     background: none; border: none; cursor: pointer;
-    margin-left: auto;                          /* push button to the right */
+    margin-left: auto;
   }
 
-  /* start hidden on mobile */
-  .nav { display: none; }
-
-  /* when opened via JS, show as a dropdown panel */
-  .nav.open
-  {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    position: absolute;
-    left: 16px; right: 16px; top: 100%;         /* below the header */
-    padding: 14px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    max-height: 70vh;                           /* if many items… */
-    overflow: auto;                             /* …scroll instead of cutting off */
-    z-index: 1001;
-  }
+  /* FIX: hide by default and only show when .open */
+  .nav { display: none !important; }
+  .nav.open { display: flex !important; }
 
   .nav-link{ padding: 10px 8px; }
 }
@@ -107,7 +91,7 @@ h1,h2,h3,.brand-text,.nav-link
   font-weight:800; 
   font-family:"Poppins",sans-serif;
   font-size: 22px;
-  line height: 1.2;
+  line-height: 1.2;
 }
 
 .brand-text{ font-size:24px; }
@@ -115,21 +99,18 @@ h1,h2,h3,.brand-text,.nav-link
 .nav-link{ font-weight:600; font-size:16px; color:#3b4a67; }
 .nav-link:hover{ color:var(--brand); }
 
-
 /* ---------- Hero with background photo ---------- */
 .hero
 {
   position: relative;
-  min-height: 100vh;               /* full viewport */
+  min-height: 100vh;
   display: flex;
-  align-items: flex-start;          /* content from the top */
-  justify-content: flex-start;      /* content on the left */
-  padding: 80px 56px;               /* room around the text */
-  /* If your file name has spaces, encode them as %20 */
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 80px 56px;
   background: url("images/Website Home page 1.png") no-repeat right center / cover;
 }
 
-/* Optional: subtle left-to-right overlay for readability */
 .hero::before
 {
   content:"";
@@ -138,18 +119,16 @@ h1,h2,h3,.brand-text,.nav-link
   pointer-events: none;
 }
 
-/* Boxed description area (no border) in the left corner */
 .hero-text
 {
-  position: relative;               /* above the overlay */
+  position: relative;
   z-index: 1;
   max-width: 680px;
   padding: 24px 28px;
   border-radius: 20px;
-  background: rgba(255,255,255,.88);/* “boxed” look without a border */
+  background: rgba(255,255,255,.88);
 }
 
-/* Eyebrow/heading styles (optional, match the mockup feel) */
 .eyebrow
 {
   font-family:"Poppins",sans-serif;
@@ -182,100 +161,14 @@ h1,h2,h3,.brand-text,.nav-link
   font-size: 14px;
   line-height: 1.8;
   margin: 14px 0 18px 0;
-  text-align: justify;              /* <— justified as requested */
+  text-align: justify;
 }
-
-/* ---------- Buttons ---------- */
-.btn
-{
-  display:inline-flex; align-items:center; gap:10px;
-  padding:12px 24px; border-radius:999px; font-weight:700;
-  transition:all 0.2s ease; border:2px solid transparent;
-}
-
-.btn-primary
-{
-  background: linear-gradient(180deg,var(--accent),var(--accent-2));
-  color:#fff; box-shadow:0 6px 16px rgba(255,75,119,.35);
-}
-
-.btn-primary:hover{ transform:translateY(-2px); }
-
-.btn-ghost
-{
-  background:#fff; border-color:#e5e9f5; color:var(--ink);
-}
-
-.btn-ghost:hover{ border-color:#d0d7e6; }
-
-/* ---------- Links Section (under bio) ---------- */
-.links
-{
-  margin:18px 0 6px 0;
-  display:flex; gap:14px; flex-wrap:wrap;
-}
-.links a
-{
-  display:inline-flex; align-items:center; gap:8px;
-  background:#fff; border:2px solid var(--brand);
-  padding:10px 18px; border-radius:999px;
-  font-weight:600; color:var(--brand);
-  transition:all 0.2s ease;
-}
-.links a:hover{ background:var(--brand); color:#fff; }
-.links a i{ font-size:18px; }
-
-/* ---------- Responsive ---------- */
-@media (max-width: 1000px)
-{
-  
-  .nav{ display:none; }
-  
-  .hero
-  {
-    padding: 56px 20px;
-    background-position: center;    /* center bg on small screens */
-  }
-
-  .hero::before
-  {
-    background: rgba(255,255,255,.9); /* stronger overlay for small screens */
-  }
-  
-  .hero-text
-  {
-    max-width: 100%;
-    padding: 20px;
-    border-radius: 16px;
-  }
-
-}
-
-.form-container 
-{
-  display: flex;
-  justify-content: center;   /* horizontal center */
-  align-items: center;       /* vertical center (if using full height) */
-  min-height: 80vh;          /* pushes form towards center of screen */
-}
-
-form 
-{
-  background: var(--bg);     /* uses your theme */
-  padding: 20px 30px;
-  border: 1px solid var(--muted);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 400px;          /* controls size */
-}
-
 
 /* ---------- Footer ---------- */
 footer 
 {
-  background-color: var(--bg);   /* matches your header tone */
-  color: var(--ink);               /* text in light color */
+  background-color: var(--bg);
+  color: var(--ink);
   padding: 4px 0px;
   text-align: center;
   font-size: 0.85rem;
@@ -290,22 +183,19 @@ footer .footer-links
 
 footer .footer-links a 
 {
-  color: var(--ink);               /* links same as footer text */
+  color: var(--ink);
   margin: 0 19px;
   text-decoration: none;
   font-size: 0.85rem;
   transition: color 0.3s ease;
 }
 
-footer .footer-links a:hover 
-{
-  color: var(--accent);            /* highlight with brand color */
-}
+footer .footer-links a:hover { color: var(--accent); }
 
 footer .footer-bottom 
 {
   margin: 0;
-  border-top: 1px solid var(--muted); /* subtle line */
+  border-top: 1px solid var(--muted);
   padding: 0px;
   font-size: 0.9rem;
   line-height: .2;
@@ -313,11 +203,11 @@ footer .footer-bottom
 }
 
 header.site-header {
-  background: var(--bg);   /* keep header same as footer */
+  background: var(--bg);
 }
 
 footer {
-  background: var(--bg);   /* match header color */
+  background: var(--bg);
   color: var(--ink);
   text-align: center;
   padding: 6px 0;
