@@ -69,26 +69,8 @@ Thanks for stopping by — I hope you discover something here that sparks your o
 
   </main>
 
-  <script>
-    // Simple mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      toggle.classList.toggle('open');
-    });
-  </script>
-  
-  <script>
-          const btn = document.querySelector('.nav-toggle');
-          const nav = document.querySelector('.nav');
-          btn.addEventListener('click', () => 
-            {
-            nav.classList.toggle('open');
-            const opened = nav.classList.contains('open');
-            btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
-            });
-  </script>
+<script src="assets/js/layout-loader.js" defer></script>
+<script src="assets/js/menu.js" defer></script>
 
 <div data-include="footer"></div>
  
