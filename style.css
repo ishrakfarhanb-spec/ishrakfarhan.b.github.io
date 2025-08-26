@@ -275,6 +275,7 @@ form
 
 
 /* ---------- Footer ---------- */
+
 footer 
 {
   background: var(--bg);           /* match header color */
@@ -283,18 +284,21 @@ footer
   text-align: center;
   font-size: 0.85rem;
   margin-top: 4px;
+  
+  padding: 6px 0;
+  font-size: 0.85rem;
 }
 
 footer .footer-links 
 {
   margin-bottom: 4px;
-  padding: 4px 0;
+  padding: 1px 0;
 }
 
 footer .footer-links a 
 {
   color: var(--ink);               /* links same as footer text */
-  margin: 0 19px;
+  margin: 0 14px;
   text-decoration: none;
   font-size: 0.6rem;
   transition: color 0.3s ease;
@@ -306,12 +310,12 @@ footer .footer-links a:hover
 }
 
 footer .footer-bottom 
-{ 
+{
   margin: 5;
   border-top: 1px solid var(--muted); /* subtle line */
-  padding: 1px;
+  padding: 0px;
   font-size: 0.6rem;
-  line-height: .2;
+  line-height: .1;
   opacity: 0.8;
 }
 
@@ -320,6 +324,6 @@ footer {
   background: var(--bg);   /* match header color */
   color: var(--ink);
   text-align: center;
-  padding: 6px 0;
-  font-size: 0.85rem;
+  padding: .1px 0;
+  font-size: 0.02rem;
 }
