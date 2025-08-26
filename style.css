@@ -128,6 +128,7 @@ h1,h2,h3,.brand-text,.nav-link
   align-items: flex-start;          /* content from the top */
   justify-content: flex-start;      /* content on the left */
   padding: 80px 56px;               /* room around the text */
+
   /* If your file name has spaces, encode them as %20 */
   background: url("images/Website Home page 1.png") no-repeat right center / cover;
 }
@@ -247,6 +248,14 @@ h1,h2,h3,.brand-text,.nav-link
   background-size: cover;
 }
 
+  @media (max-width: 1000px) 
+  {
+  .hero 
+    {
+    background: url("images/website-home-page-1.png") no-repeat center center / cover;
+    background-attachment: scroll;
+  }
+  }
 .hero::before{
   content:"";
   position:absolute; inset:0;
