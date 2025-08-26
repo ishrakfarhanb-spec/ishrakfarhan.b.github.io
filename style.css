@@ -120,73 +120,36 @@ h1,h2,h3,.brand-text,.nav-link
 
 
 /* ---------- Hero with background photo ---------- */
-/* --- HERO BACKGROUND (desktop & mobile safe) --- */
 .hero
-  {
+{
   position: relative;
-  min-height: 100vh;
+  min-height: 100vh;               /* full viewport */
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 80px 56px;
-
-  /* Use a safe path (no spaces) or encode spaces */
-  /* Prefer renaming file: images/website-home-page-1.png */
-  background-image: url("images/Website%20Home%20page%201.png");
-  background-repeat: no-repeat;
-  background-position: center right;   /* keeps subject visible on wide screens */
-  background-size: cover;              /* avoids distortion on zoom */
-  background-attachment: scroll;       /* default; we’ll enable fixed only on desktop */
+  align-items: flex-start;          /* content from the top */
+  justify-content: flex-start;      /* content on the left */
+  padding: 80px 56px;               /* room around the text */
+  /* If your file name has spaces, encode them as %20 */
+  background: url("images/Website Home page 1.png") no-repeat right center / cover;
 }
 
-/* Subtle overlay so text stays readable without hiding the image */
+/* Optional: subtle left-to-right overlay for readability */
 .hero::before
-  {
+{
   content:"";
-  position:absolute; inset:0;
-  background: linear-gradient
-    (
-    90deg,
-    rgba(255,255,255,.78) 0%,
-    rgba(255,255,255,.48) 38%,
-    rgba(255,255,255,.08) 72%,
-    rgba(255,255,255,0) 100%
-    );
-  pointer-events:none;
-  z-index:0;            /* stays behind text */
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.55) 36%, rgba(255,255,255,.10) 70%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
 }
 
-/* Keep hero text above overlay & image */
+/* Boxed description area (no border) in the left corner */
 .hero-text
-  { position: relative; z-index: 1; background: rgba(255,255,255,.88); border-radius: 20px; }
-
-/* Header sits above everything */
-.site-header
-  { position: sticky; top:0; z-index: 1002; background: var(--bg); }
-
-/* --- Desktop polish --- */
-@media (min-width: 1001px)
-  {
-  .hero
-  {
-    background-position: right center;
-    background-attachment: fixed;   /* “protects” look while zooming on desktop */
-  }
-}
-
-/* --- Mobile fixes (make image visible) --- */
-@media (max-width: 1000px){
-  .hero
-  {
-    padding: 56px 20px;
-    background-position: center;    /* don’t push image off-screen */
-    background-attachment: scroll;  /* iOS/Android compatibility */
-  }
-  .hero::before
-  {
-    /* lighten overlay so image isn’t “invisible” on phones */
-    background: rgba(255,255,255,.55);
-  }
+{
+  position: relative;               /* above the overlay */
+  z-index: 1;
+  max-width: 680px;
+  padding: 24px 28px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.88);/* “boxed” look without a border */
 }
 
 /* Eyebrow/heading styles (optional, match the mockup feel) */
@@ -271,25 +234,57 @@ h1,h2,h3,.brand-text,.nav-link
   
   .nav{ display:none; }
   
-  .hero
-  {
-    padding: 56px 20px;
-    background-position: center;    /* center bg on small screens */
-  }
-
-  .hero::before
-  {
-    background: rgba(255,255,255,.9); /* stronger overlay for small screens */
-  }
-  
-  .hero-text
-  {
-    max-width: 100%;
-    padding: 20px;
-    border-radius: 16px;
-  }
-
+  .hero{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;         /* vertical center */
+  justify-content: flex-start;
+  padding: 60px;
+  background-image: url("images/website-home-page-1.png"); /* rename safely */
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
 }
+
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,.9) 0%,
+    rgba(255,255,255,.75) 40%,
+    rgba(255,255,255,0) 70%
+  );
+  pointer-events:none;
+  z-index:0;
+}
+
+.hero-text{
+  position: relative;
+  z-index: 1;
+  width: 50%;                  /* restrict to left half */
+  max-width: 650px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.85);
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+/* --- Mobile: full width text --- */
+@media (max-width: 1000px){
+  .hero{
+    padding: 40px 20px;
+    background-position: center;
+    background-attachment: scroll;
+  }
+  .hero-text{
+    width: 100%;                /* allow full width on phones */
+    padding: 20px;
+    background: rgba(255,255,255,.9);
+  }
+}
+
 
 .form-container 
 {
@@ -312,7 +307,6 @@ form
 
 
 /* ---------- Footer ---------- */
-
 footer 
 {
   background: var(--bg);           /* match header color */
