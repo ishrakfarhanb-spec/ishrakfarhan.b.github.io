@@ -270,7 +270,7 @@ footer .footer-links
 
 footer .footer-links a 
 {
-  color: var(--bg);               /* links same as footer text */
+  color: var(--ink);               /* links same as footer text */
   margin: 0 12px;
   text-decoration: none;
   font-size: 0.9rem;
@@ -285,7 +285,7 @@ footer .footer-links a:hover
 footer .footer-bottom 
 {
   border-top: 1px solid var(--muted); /* subtle line */
-  padding-top: 15px;
+  padding-top: 5px;
   font-size: 0.85rem;
   opacity: 0.8;
 }
