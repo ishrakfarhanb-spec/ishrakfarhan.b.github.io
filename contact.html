@@ -12,7 +12,8 @@
 
   <style>
     /* Force absolute white page bg */
-    body {
+    body 
+    {
       background: #ffffff !important;
     }
 
@@ -93,23 +94,8 @@
 </head>
 
 <body>
-  <!-- HEADER (unchanged, keeps bg from style.css vars) -->
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <span class="brand-mark">I</span><span class="brand-text">ISHRAK</span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">☰</button>
-    <nav id="site-nav" class="nav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="https://github.com/projects?query=is%3Aopen+creator%3A%40me" class="nav-link">Projects</a>
-      <a href="https://www.goodreads.com/review/drafts" class="nav-link">Book Reviews</a>
-      <a href="creative.html" class="nav-link">Creative</a>
-      <a href="experience.html" class="nav-link">Experiences</a>
-      <a href="acievements.html" class="nav-link">Acievements</a>
-      <a href="contact.html" class="nav-link active">Contact</a>
-    </nav>
-  </header>
+  
+  <div data-include="header"></div>
 
   <!-- CONTACT TITLE -->
   <div style="text-align:center; padding:32px 16px 8px;">
@@ -145,35 +131,11 @@
 
   <!-- FOOTER -->
   <br><br>
-  <footer>
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms of Use</a>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Ishrak Farhan Bhuiyan - All Rights Reserved</p>
-    </div>
-  </footer>
+    
+  <div data-include="footer"></div>
 
-  <!-- Nav toggle JS -->
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      toggle.classList.toggle('open');
-    });
-  </script>
-  <script>
-    const btn = document.querySelector('.nav-toggle');
-    const nav2 = document.querySelector('.nav');
-    btn.addEventListener('click', () => {
-      nav2.classList.toggle('open');
-      const opened = nav2.classList.contains('open');
-      btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
-    });
-  </script>
+<script src="/ishrakfarhan.b.github.io/assets/js/layout-loader.js" defer></script>
+<script src="/ishrakfarhan.b.github.io/assets/js/menu.js" defer></script>
+  
 </body>
 </html>
