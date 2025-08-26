@@ -252,7 +252,8 @@ h1,h2,h3,.brand-text,.nav-link
 }
 
 /* ---------- Footer ---------- */
-footer {
+footer 
+{
   width: 100%;
   background-color: var(--ink);   /* matches your header tone */
   color: var(--bg);               /* text in light color */
@@ -262,11 +263,13 @@ footer {
   margin-top: 40px;
 }
 
-footer .footer-links {
+footer .footer-links 
+{
   margin-bottom: 20px;
 }
 
-footer .footer-links a {
+footer .footer-links a 
+{
   color: var(--bg);               /* links same as footer text */
   margin: 0 12px;
   text-decoration: none;
@@ -274,11 +277,13 @@ footer .footer-links a {
   transition: color 0.3s ease;
 }
 
-footer .footer-links a:hover {
+footer .footer-links a:hover 
+{
   color: var(--brand);            /* highlight with brand color */
 }
 
-footer .footer-bottom {
+footer .footer-bottom 
+{
   border-top: 1px solid var(--muted); /* subtle line */
   padding-top: 15px;
   font-size: 0.85rem;
