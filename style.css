@@ -255,17 +255,17 @@ h1,h2,h3,.brand-text,.nav-link
 footer 
 {
   width: 100%;
-  background-color: var(--ink);   /* matches your header tone */
-  color: var(--bg);               /* text in light color */
-  padding: 30px 20px;
+  background-color: var(--bg);   /* matches your header tone */
+  color: var(--ink);               /* text in light color */
+  padding: 10px 10px;
   text-align: center;
   font-size: 0.9rem;
-  margin-top: 40px;
+  margin-top: 5px;
 }
 
 footer .footer-links 
 {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 footer .footer-links a 
