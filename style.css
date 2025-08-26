@@ -226,7 +226,8 @@ h1,h2,h3,.brand-text,.nav-link
 .links a i{ font-size:18px; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1000px){
+@media (max-width: 1000px)
+{
   
   .nav{ display:none; }
   
@@ -247,24 +248,40 @@ h1,h2,h3,.brand-text,.nav-link
     padding: 20px;
     border-radius: 16px;
   }
-  /* ---------- Footer Styles ---------- */
-footer 
-{
-  width: 100%;                  /* stretch across the page */
-  background-color: var(--bg);  /* use your background tone */
-  color: var(--ink);            /* text color */
-  text-align: center;           /* center text */
-  padding: 20px 10px;           /* spacing */
-  margin-top: 40px;             /* push footer down */
+
+}
+
+/* ---------- Footer ---------- */
+footer {
+  width: 100%;
+  background-color: var(--ink);   /* matches your header tone */
+  color: var(--bg);               /* text in light color */
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+footer .footer-links {
+  margin-bottom: 20px;
+}
+
+footer .footer-links a {
+  color: var(--bg);               /* links same as footer text */
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: var(--brand);            /* highlight with brand color */
+}
+
+footer .footer-bottom {
   border-top: 1px solid var(--muted); /* subtle line */
-  font-size: 0.9rem;            /* slightly smaller than body */
+  padding-top: 15px;
+  font-size: 0.85rem;
+  opacity: 0.8;
 }
 
-footer small 
-{
-  display: block;
-  opacity: 0.7;                 /* lighter look */
-  letter-spacing: 0.5px;
-}
-
-}
