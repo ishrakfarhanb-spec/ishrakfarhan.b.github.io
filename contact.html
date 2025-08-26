@@ -3,129 +3,183 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1", viewport-fit=cover />
+  <title>ISHRAK | Contact</title>
+
+  <!-- Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="style.css?v=4" rel="stylesheet" />
-  <title>Contact Form</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
   <style>
-    /* ---------- CSS Reset ---------- */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body 
+    /* --- Form Card (Feedback style) --- */
+    
+    .feedback-card 
     {
-      font-family: Arial, sans-serif;
       background: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 32px 28px;
+      width: 100%;
+      max-width: 450px;
+      margin: 24px auto;
     }
 
-    .contact-form 
+    .feedback-card h2 
     {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 400px;
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      color: var(--ink);
     }
 
-    .contact-form h2 
-    {
-      font-size: 22px;
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #0b1635;
-    }
-
-    .contact-form p 
-    {
-      font-size: 14px;
-      color: #6c7a91;
-      margin-bottom: 20px;
-    }
-
-    .contact-form label 
+    .feedback-card label 
     {
       display: block;
-      font-size: 14px;
-      margin-bottom: 5px;
-      color: #0b1635;
+      margin-bottom: 6px;
+      font-weight: 600;
+      text-align: left;
     }
 
-    .contact-form input,
-    .contact-form textarea 
+    .feedback-card input,
+    .feedback-card textarea 
     {
       width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-
-    .contact-form textarea 
-    {
-      resize: vertical;
-      height: 100px;
-    }
-
-    .contact-form button 
-    {
-      width: 100%;
-      padding: 12px;
-      background: #3b2cf2;
-      color: #fff;
-      font-size: 16px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
       border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: 0.3s;
+      border-radius: 24px;
+      background: #ffffff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: box-shadow 0.2s;
     }
 
-    .contact-form button:hover 
+    .feedback-card input:focus,
+    .feedback-card textarea:focus 
     {
-      background: #f4f7fb;
+      box-shadow: 0 0 0 2px var(--brand);
+      background: ;
     }
+
+    .feedback-card textarea 
+    {
+      border-radius: 12px;
+      font:"arial";
+      resize: vertical;
+    }
+
+    .feedback-card button 
+    {
+      width: 100%;
+      background: #f0a2b5; /* pink submit button */
+      color: #ffffff;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 24px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .feedback-card button:hover 
+    {
+      background: #ff4f79;
+    }
+
+    .contact-info 
+    {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+    .contact-info p { margin: 10px 0; }
   </style>
 </head>
+
 <body>
-  <div class="contact-form">
-    <h2>Get in Touch</h2>
-    <p>Fill out the form to convey feedbacl in order to assist me improvising the site</p>
-    <form>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required />
+ <!-- HEADER (same as home) -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">I</span><span class="brand-text">ISHRAK</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="https://github.com/projects?query=is%3Aopen+creator%3A%40me" class="nav-link">Projects</a>
+      <a href="https://www.goodreads.com/review/drafts" class="nav-link">Book Reviews</a>
+      <a href="creative.html" class="nav-link">Creative</a>
+      <a href="experience.html" class="nav-link">Experiences</a>
+      <a href="acievements.html" class="nav-link">Acievements</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+  </header>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required />
-
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" placeholder="+1 (234) 56789" />
-
-      <label for="message">Message</label>
-      <input id="message" name="message" placeholder="Your message" required />
-
-      <button type="submit">Send Message</button>
-    </form>
+  <!-- CONTACT TITLE -->
+  <div style="text-align:center; padding:32px 16px 8px;">
+    <h1 class="hero-title"><span class="line-1">Contact</span></h1>
   </div>
 
-<footer>
+  <!-- FEEDBACK FORM -->
+  <section>
+    <div class="feedback-card">
+      <h2>FEEDBACK FORM</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required />
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Enter message" rows="5" required></textarea>
+
+        <button type="submit">Submit →</button>
+      </form>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <br><p><i class="fa-solid fa-phone"></i> +880-19795-25874</p>
+      <p><i class="fa-solid fa-envelope"></i> ishrakfarhan.b@gmail.com</p>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as home) -->
+  <br><br><footer>
     <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact?</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms of Use</a>
-
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms of Use</a>
     </div>
-
     <div class="footer-bottom">
-          <p>© 2025 Ishrak Farhan Bhuiyan - All Rights Reserved</p>
+      <p>© 2025 Ishrak Farhan Bhuiyan - All Rights Reserved</p>
     </div>
-</footer>
+  </footer>
 
+  <!-- Nav toggle JS -->
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  </script>
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav2 = document.querySelector('.nav');
+    btn.addEventListener('click', () => {
+      nav2.classList.toggle('open');
+      const opened = nav2.classList.contains('open');
+      btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+    });
+  </script>
 </body>
 </html>
