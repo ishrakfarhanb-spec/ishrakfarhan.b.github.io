@@ -46,17 +46,55 @@ h1,h2,h3,.brand-text,.nav-link
   padding: 8px 24px;
 }
 
-/* Default: desktop shows nav, hides hamburger */
-.nav-toggle { display: none; }
+.brand
+{ display:flex; align-items:center; gap:10px; font-weight:700; }
 
-@media (min-width: 1001px)
+.brand-mark
 {
-  .nav { display: flex; gap: 24px; align-items: center; }
-  .nav-toggle { display: none; }          /* ensure hidden on wide screens */
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  background: var(--accent); color: #fff;
+  display:flex; justify-content:center; 
+  align-items:center;
+  font-weight:800; 
+  font-family:"Poppins",sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
 }
 
+.brand-text{ font-size:24px; }
+.nav{ display:flex; gap:24px; justify-content:right; }
+.nav-link{ font-weight:600; font-size:16px; color:#3b4a67; }
+.nav-link:hover{ 
+    color:var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgba(255,75,119,.35); }
+
+
+
+
+    /* Default: desktop shows nav, hides hamburger */
+.nav-toggle 
+{ 
+    display: none; 
+}
+
+@media (min-width: 1200px)
+{
+  .nav 
+  { 
+    display: flex; 
+    gap: 24px; 
+    align-items: center; 
+}
+  .nav-toggle { display: none; }                                        /* ensure hidden on wide screens */
+}
+
+
 /* Mobile/tablet: hamburger visible, nav hidden until opened */
-@media (max-width: 1000px)
+@media (max-width: 1200px)
 {
   .site-header
   {
@@ -73,8 +111,10 @@ h1,h2,h3,.brand-text,.nav-link
     margin-left: auto;                          /* push button to the right */
   }
 
+
   /* start hidden on mobile */
   .nav { display: none; }
+
 
   /* when opened via JS, show as a dropdown panel */
   .nav.open
@@ -95,139 +135,6 @@ h1,h2,h3,.brand-text,.nav-link
 
   .nav-link{ padding: 10px 8px; }
 }
-
-.brand
-{ display:flex; align-items:center; gap:10px; font-weight:700; }
-
-.brand-mark
-{
-  width: 40px; 
-  height: 40px; 
-  border-radius: 50%;
-  background: var(--accent); color: #fff;
-  display:flex; justify-content:center; 
-  align-items:center;
-  font-weight:800; 
-  font-family:"Poppins",sans-serif;
-  font-size: 22px;
-  line height: 1.2;
-}
-
-.brand-text{ font-size:24px; }
-.nav{ display:flex; gap:24px; justify-content:right; }
-.nav-link{ font-weight:600; font-size:16px; color:#3b4a67; }
-.nav-link:hover{ color:var(--accent); }
-
-
-/* ---------- Hero with background photo ---------- */
-.hero
-{
-  position: relative;
-  min-height: 100vh;               /* full viewport */
-  display: flex;
-  align-items: flex-start;          /* content from the top */
-  justify-content: flex-start;      /* content on the left */
-  padding: 80px 56px;               /* room around the text */
-
-  /* If your file name has spaces, encode them as %20 */
-  background: url("images/Website Home page 1.png") no-repeat right center / cover;
-}
-
-/* Optional: subtle left-to-right overlay for readability */
-.hero::before
-{
-  content:"";
-  position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.55) 36%, rgba(255,255,255,.10) 70%, rgba(255,255,255,0) 100%);
-  pointer-events: none;
-}
-
-/* Boxed description area (no border) in the left corner */
-.hero-text
-{
-  position: relative;               /* above the overlay */
-  z-index: 1;
-  max-width: 680px;
-  padding: 24px 28px;
-  border-radius: 20px;
-  background: rgba(255,255,255,.88);/* “boxed” look without a border */
-}
-
-/* Eyebrow/heading styles (optional, match the mockup feel) */
-.eyebrow
-{
-  font-family:"Poppins",sans-serif;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  font-weight:600;
-  color:#3a4670;
-  margin:0 0 2.5px 0;
-}
-
-.hero-title{ margin:0 0 10px 0; line-height:1.05; }
-
-.hero-title .line-1
-{
-  display:block; text-transform:uppercase;
-  font-weight:800; color:var(--brand);
-  font-size:clamp(36px,6vw,74px);
-}
-
-.hero-title .line-2
-{
-  display:block; text-transform:uppercase;
-  font-weight:900; color:var(--accent);
-  font-size:clamp(40px,6.2vw,78px);
-}
-
-.subtitle
-{
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.8;
-  margin: 14px 0 18px 0;
-  text-align: justify;              /* <— justified as requested */
-}
-
-/* ---------- Buttons ---------- */
-.btn
-{
-  display:inline-flex; align-items:center; gap:10px;
-  padding:12px 24px; border-radius:999px; font-weight:700;
-  transition:all 0.2s ease; border:2px solid transparent;
-}
-
-.btn-primary
-{
-  background: linear-gradient(180deg,var(--accent),var(--accent-2));
-  color:#fff; box-shadow:0 6px 16px rgba(255,75,119,.35);
-}
-
-.btn-primary:hover{ transform:translateY(-2px); }
-
-.btn-ghost
-{
-  background:#fff; border-color:#e5e9f5; color:var(--ink);
-}
-
-.btn-ghost:hover{ border-color:#d0d7e6; }
-
-/* ---------- Links Section (under bio) ---------- */
-.links
-{
-  margin:18px 0 6px 0;
-  display:flex; gap:14px; flex-wrap:wrap;
-}
-.links a
-{
-  display:inline-flex; align-items:center; gap:8px;
-  background:#fff; border:2px solid var(--brand);
-  padding:10px 18px; border-radius:999px;
-  font-weight:600; color:var(--brand);
-  transition:all 0.2s ease;
-}
-.links a:hover{ background:var(--brand); color:#fff; }
-.links a i{ font-size:18px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px)
@@ -295,6 +202,127 @@ h1,h2,h3,.brand-text,.nav-link
 }
 }
 
+/* ---------- Hero with background photo ---------- */
+.hero
+{
+  position: relative;
+  min-height: 100vh;               /* full viewport */
+  display: flex;
+  align-items: flex-start;          /* content from the top */
+  justify-content: flex-start;      /* content on the left */
+  padding: 80px 56px;               /* room around the text */
+
+  /* If your file name has spaces, encode them as %20 */
+  background: url("images/Website Home page 1.png") no-repeat right center / cover;
+}
+
+/* Optional: subtle left-to-right overlay for readability */
+.hero::before
+{
+  content:"";
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.55) 36%, rgba(255,255,255,.10) 70%, rgba(255,255,255,0) 100%);
+  pointer-events: none;
+}
+
+/* Boxed description area (no border) in the left corner */
+.hero-text
+{
+  position: relative;               /* above the overlay */
+  z-index: 1;
+  max-width: 680px;
+  padding: 24px 28px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.88);/* “boxed” look without a border */
+}
+
+/* Eyebrow/heading styles (optional, match the mockup feel) */
+.eyebrow
+{
+  font-family:"Poppins",sans-serif;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:#3a4670;
+  margin:0 0 2.5px 0;
+}
+
+/* ---------- Eyebrow Animation ---------- */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.hero-title{ margin:0 0 10px 0; line-height:1.05; }
+
+.hero-title .line-1
+{
+  display:block; text-transform:uppercase;
+  font-weight:800; color:var(--brand);
+  font-size:clamp(36px,6vw,74px);
+}
+
+.hero-title .line-2
+{
+  display:block; text-transform:uppercase;
+  font-weight:900; color:var(--accent);
+  font-size:clamp(40px,6.2vw,78px);
+}
+
+.subtitle
+{
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 14px 0 18px 0;
+  text-align: justify;              /* <— justified as requested */
+}
+
+/* ---------- Buttons ---------- */
+.btn
+{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 24px; border-radius:999px; font-weight:700;
+  transition:all 0.2s ease; border:2px solid transparent;
+}
+
+.btn-primary
+{
+  background: linear-gradient(180deg,var(--accent),var(--accent-2));
+  color:#fff; box-shadow:0 6px 16px rgba(255,75,119,.35);
+}
+
+.btn-primary:hover{ transform:translateY(-2px); }
+
+.btn-ghost
+{
+  background:#fff; border-color:#e5e9f5; color:var(--ink);
+}
+
+.btn-ghost:hover{ border-color:#d0d7e6; }
+
+/* ---------- Links Section (under bio) ---------- */
+.links
+{
+  margin:18px 0 6px 0;
+  display:flex; gap:14px; flex-wrap:wrap;
+}
+.links a
+{
+  display:inline-flex; align-items:center; gap:8px;
+  background:#fff; border:2px solid var(--brand);
+  padding:10px 18px; border-radius:999px;
+  font-weight:600; color:var(--brand);
+  transition:all 0.2s ease;
+}
+.links a:hover{ background:var(--brand); color:#fff; }
+.links a i{ font-size:18px; }
+
+
+
 .form-container 
 {
   display: flex;
@@ -339,7 +367,7 @@ footer .footer-links a
 {
   color: var(--ink);               /* links same as footer text */
   margin: 0 14px;
-  text-decoration: none;
+  
   font-size: 0.6rem;
   transition: color 0.3s ease;
 }
@@ -347,6 +375,9 @@ footer .footer-links a
 footer .footer-links a:hover 
 {
   color: var(--accent);            /* highlight with brand color */
+  text-decoration: underline;
+  text-underline-offset: .1rem;
+  text-decoration-color: rgba(255,75,119,.35);
 }
 
 footer .footer-bottom 
