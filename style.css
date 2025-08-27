@@ -163,7 +163,9 @@ h1,h2,h3,.brand-text,.nav-link
     background-attachment: scroll;
   }
   }
-.hero::before{
+  
+.hero::before
+  {
   content:"";
   position:absolute; inset:0;
   background: linear-gradient(
@@ -176,7 +178,8 @@ h1,h2,h3,.brand-text,.nav-link
   z-index:0;
 }
 
-.hero-text{
+.hero-text
+  {
   position: relative;
   z-index: 1;
   width: 50%;                  /* restrict to left half */
@@ -188,17 +191,19 @@ h1,h2,h3,.brand-text,.nav-link
 }
 
 /* --- Mobile: full width text --- */
-@media (max-width: 1000px){
+@media (max-width: 1000px)
+  {
   .hero{
     padding: 40px 20px;
     background-position: center;
     background-attachment: scroll;
   }
-  .hero-text{
+  .hero-text
+    {
     width: 100%;                /* allow full width on phones */
     padding: 20px;
     background: rgba(255,255,255,.9);
-  }
+    }
 }
 }
 
