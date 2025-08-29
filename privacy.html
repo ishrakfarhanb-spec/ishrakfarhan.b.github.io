@@ -4,367 +4,409 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy | Ishrak Farhan</title>
-  <meta name="description" content="Privacy Policy for Ishrak Farhan Bhuiyan" />
+  <meta name="description" content="Privacy Policy for Ishrak Farhan Bhuiyan (Bangladesh-focused personal website).">
+
+  <!-- Typography (keeps your site’s look but more professional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#0b1324;           /* page background */
-      --panel:#ffffff;        /* card background */
-      --ink:#0c1b3a;          /* main text color */
-      --muted:#5b6b84;        /* muted text color */
-      --brand:#3b82f6;        /* accent color */
-      --border:#e6eaf1;       /* borders */
-      --code:#f6f8fb;         /* code blocks */
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body
-    {
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto         Sans,sans-serif;line-height:1.65;color:var(--ink);
-      background:linear-gradient(180deg,#0b1324 0%,#101b34 100%);}
-    
-.wrap{max-width:980px;margin:40px auto;padding:0 20px}
-.card
-    {
-      background:var(--panel);
-      border-radius:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
-      overflow:hidden;border:1px solid var(--border)
-    }
-    
-header
-    {padding:28px 28px 0}
-
-.title{display:flex;align-items:center;gap:14px}
-
-.logo
-    {
-      width:50px;
-      height:50px;
-      border-radius:10px;
-      background: #990000;
-      display:grid;
-      place-items:center;
-      color:#fff;
-      font-weight:700
-    }
-    
-    h1
-    {
-      font-size:clamp(1.5rem,2.3vw,2.2rem);
-      margin:0
-    }
-    
-    .muted{color:var(--muted)}
-    .meta{padding:0 28px 24px;border-bottom:1px dashed var(--border)}
-    .meta small{display:block;color:var(--muted)}
-    nav{padding:20px 28px;border-bottom:1px dashed var(--border)}
-    nav h2{font-size:1rem;margin:0 0 10px;color:var(--ink);text-transform:uppercase;letter-spacing:.08em}
-    nav ol{margin:0;padding-left:18px}
-    nav a{color:var(--brand);text-decoration:none}
-    main{padding:10px 28px 28px}
-    section{padding:18px 0;border-bottom:1px solid var(--border)}
-    section:last-child{border-bottom:none}
-    h3{margin:0 0 8px;font-size:1.1rem}
-    p,li{color:var(--ink)}
-    code,pre
-    {
-      background:var(--code);
-      border:1px solid var(--border);
-      border-radius:10px;
-      padding:.5rem .6rem;
-      font-family:ui-monospace,SFMono-Regular,Menlo,monospace
+    :root {
+      /* Neutral, high-contrast legal theme */
+      --paper: #ffffff;
+      --ink: #0b1324;
+      --muted: #5b6b84;
+      --line: #e6eaf1;
+      --brand: #1f3af2;
+      --brand-ink: #12206f;
+      --badge: #f1f5ff;
+      --code: #f6f8fb;
     }
 
-    .badge
-    {
-      display:inline-block;
-      padding:.15rem .5rem;
-      border:1px solid var(--border);
-      border-radius:999px;
-      background:#fff;
-      font-size:.8rem;
-      color:var(--muted);
+    /* Base / reset */
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #0b1324 0%, #101b34 100%);
+      line-height: 1.65;
     }
-    
-    .foot
-    {
-      padding:18px 28px;
-      background:#fafbff;
-      border-top:1px dashed var(--border);
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;align-items:center;
-      justify-content:space-between
+
+    /* Page wrap */
+    .policy-wrap {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    
-    .btn
-    {
-      display:inline-block;
-      padding:.6rem .9rem;
-      border-radius:12px;
-      border:1px solid var(--border);text-decoration:none;
-      color:var(--ink);
-      background:#fff
+
+    /* Card shell */
+    .policy-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+      overflow: hidden;
     }
-    
-    .btn:hover
-    {
-      box-shadow:0 4px 16px rgba(59,130,246,.15)
+
+    /* Header */
+    .policy-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 28px 28px 18px 28px;
+      border-bottom: 1px dashed var(--line);
     }
-    
-    .top
-    {
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      background:var(--brand);
-      color:#fff;
-      border-radius:999px;
-      width:44px;
-      height:44px;
-      display:grid;
-      place-items:center;
-      text-decoration:none;
-      box-shadow:0 10px 24px rgba(59,130,246,.35)
+    .policy-logo {
+      width: 50px; height: 50px;
+      display: grid; place-items: center;
+      border-radius: 12px;
+      background: var(--brand);
+      color: #fff; font-weight: 700;
+      font-family: "Poppins", sans-serif;
     }
-    
-    .notice
-    {
-      background:#fff7ed;
-      border:1px solid #ffedd5;
-      color:#9a3412;
-      text-align: justify;
-      padding:.7rem 1rem;
-      border-radius:12px
+    .policy-title h1 {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      letter-spacing: .2px;
+      font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+      color: var(--brand-ink);
     }
-   
-    .grid
-    {
-      display:grid;
-      grid-template-columns:1fr;
-      gap:14px
+    .policy-title .muted {
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
     }
-    
-    @media (min-width:720px)
-    {
-      .grid{grid-template-columns:1fr 1fr}
+
+    /* Meta bar */
+    .policy-meta {
+      padding: 12px 28px 18px 28px;
+      border-bottom: 1px dashed var(--line);
+      display: grid;
+      gap: 4px;
+      grid-template-columns: 1fr;
     }
- 
+    .policy-meta small { color: var(--muted); }
+    .badge {
+      display: inline-block; padding: .2rem .55rem;
+      background: var(--badge); color: var(--brand-ink);
+      border: 1px solid var(--line);
+      border-radius: 999px; font-size: .8rem;
+    }
+
+    /* Layout: sidebar + content */
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      padding: 18px 24px 28px 24px;
+    }
+
+    /* Desktop TOC (sticky) */
+    .toc-desktop {
+      position: sticky; top: 18px;
+      align-self: start;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 14px 14px 16px;
+      background: #fff;
+    }
+    .toc-desktop h2 {
+      font-size: .95rem; margin: 0 0 10px 0;
+      text-transform: uppercase; letter-spacing: .08em;
+      color: var(--muted);
+    }
+    .toc-desktop ol {
+      margin: 0; padding-left: 18px;
+    }
+    .toc-desktop a {
+      color: var(--brand-ink); text-decoration: none;
+    }
+    .toc-desktop a:hover { text-decoration: underline; }
+
+    /* Mobile TOC (collapsible) */
+    .toc-mobile {
+      display: none;
+      padding: 0 24px 0 24px;
+      border-bottom: 1px dashed var(--line);
+      background: #fff;
+    }
+    .toc-mobile summary {
+      cursor: pointer;
+      padding: 14px 0;
+      font-weight: 600;
+      color: var(--brand-ink);
+      list-style: none;
+    }
+    .toc-mobile summary::marker { display: none; }
+    .toc-mobile ol { margin: 0 0 14px 0; padding-left: 22px; }
+
+    /* Article */
+    .policy-main {
+      min-width: 0; /* fix overflow in grid */
+    }
+    .policy-main section {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .policy-main section:last-child { border-bottom: none; }
+
+    /* Heading numbering via CSS counters */
+    .policy-main { counter-reset: sec; }
+    .policy-main h2 {
+      counter-increment: sec;
+      position: relative;
+      margin: 0 0 8px 0;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    }
+    .policy-main h2::before {
+      content: counter(sec) ") ";
+      color: var(--brand-ink);
+      font-weight: 700;
+    }
+
+    p, li { color: var(--ink); }
+    .muted { color: var(--muted); }
+
+    .notice {
+      background: #fff7ed;
+      border: 1px solid #ffedd5;
+      color: #9a3412;
+      padding: .75rem 1rem;
+      border-radius: 10px;
+    }
+
+    code, pre {
+      background: var(--code);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: .5rem .6rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .95rem;
+    }
+
+    /* Footer row inside card */
+    .policy-foot {
+      display: flex; flex-wrap: wrap;
+      gap: 10px; align-items: center; justify-content: space-between;
+      padding: 16px 24px;
+      border-top: 1px dashed var(--line);
+      background: #fafbff;
+    }
+
+    /* Back-to-top floating */
+    .to-top {
+      position: fixed; right: 18px; bottom: 18px;
+      width: 44px; height: 44px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--brand); color: #fff; text-decoration: none;
+      box-shadow: 0 10px 24px rgba(31,58,242,.35);
+    }
+
+    /* Anchor scroll offset (if you add a sticky site header later) */
+    .policy-main h2, .policy-main section { scroll-margin-top: 80px; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .policy-layout {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .toc-desktop { display: none; }
+      .toc-mobile { display: block; }
+    }
+
+    /* Print-friendly */
+    @media print {
+      body { background: #fff; }
+      .policy-wrap { margin: 0; padding: 0; }
+      .to-top, .toc-mobile { display: none !important; }
+      .policy-card { box-shadow: none; border: none; }
+      .policy-layout { display: block; padding: 0 24px 24px 24px; }
+      .toc-desktop {
+        float: right; width: 35%; margin: 0 0 0 24px; border: 1px solid #ddd;
+      }
+      .policy-foot { background: none; border-top: 1px solid #ddd; }
+    }
   </style>
-  </head>
+</head>
 
-  <body>
-  <div class="wrap">
-    <div class="card" id="top">
-      <header>
-        <div class="title">
-          <div class="logo" aria-hidden="true">PP</div>
-          <div>
-            <br><br><h1>PRIVACY POLICY</h1>
-            <br>
-            <div style="text-align: center; font-family: 'Times New Roman', Times, serif;">
-  For Ishrak Farhan Bhuiyan
-</div>
-
-          </div>
+<body>
+  <div class="policy-wrap">
+    <div class="policy-card" id="top">
+      <!-- Header -->
+      <header class="policy-header">
+        <div class="policy-logo" aria-hidden="true">PP</div>
+        <div class="policy-title">
+          <h1>Privacy Policy</h1>
+          <div class="muted">For Ishrak Farhan Bhuiyan</div>
         </div>
       </header>
 
-      <div class="meta">
+      <!-- Meta -->
+      <div class="policy-meta">
         <small><strong>Website:</strong> https://ishrakfarhanb-spec.github.io/ishrakfarhan.b.github.io/</small>
-        <small><strong>Effective date:</strong>26/08/2025</small>
-        <small class="badge">Last updated:26th August 2025</small>
+        <small><strong>Effective date:</strong> 30/08/2025</small>
+        <small class="badge">Last updated: 30 Aug 2025</small>
       </div>
 
-      <nav aria-label="Table of contents">
-        <h2>Contents</h2>
-        <ol>
-          <li><a href="#summary">Quick Summary</a></li>
-          <li><a href="#info-we-collect">Information We Collect</a></li>
-          <li><a href="#how-we-use">How We Use Information</a></li>
-          <li><a href="#legal-bases">Legal Bases (GDPR/EU/UK)</a></li>
-          <li><a href="#sharing">Sharing & Disclosure</a></li>
-          <li><a href="#cookies">Cookies & Tracking</a></li>
-          <li><a href="#analytics">Analytics & Advertising</a></li>
-          <li><a href="#retention">Data Retention</a></li>
-          <li><a href="#security">Security</a></li>
-          <li><a href="#international">International Transfers</a></li>
-          <li><a href="#rights">Your Rights</a></li>
-          <li><a href="#children">Children's Privacy</a></li>
-          <li><a href="#dnt">Do Not Track</a></li>
-          <li><a href="#changes">Changes to This Policy</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ol>
+      <!-- Mobile TOC -->
+      <nav class="toc-mobile" aria-label="Table of contents (mobile)">
+        <details>
+          <summary>Table of contents</summary>
+          <ol>
+            <li><a href="#summary">Quick Summary</a></li>
+            <li><a href="#bd-legal">Legal framework (Bangladesh)</a></li>
+            <li><a href="#collect">Information We Collect</a></li>
+            <li><a href="#use">How We Use Information</a></li>
+            <li><a href="#cookies">Cookies & Similar Technologies</a></li>
+            <li><a href="#sharing">Sharing & Disclosure</a></li>
+            <li><a href="#retention">Data Retention</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#transfers">International Transfers</a></li>
+            <li><a href="#rights">Your Rights & Choices</a></li>
+            <li><a href="#children">Children’s Privacy</a></li>
+            <li><a href="#dnt">Do Not Track</a></li>
+            <li><a href="#changes">Changes to This Policy</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </details>
       </nav>
 
-      <main>
-        <section id="summary">
-          <h3>1) Quick Summary</h3>
-          <p>This page explains what data we collect, how we use it, the choices you have, and how to contact us. If anything here seems unclear, email us at <a href="mailto:ishrakfarhan.b@gmail.com">ishrakfarhan.b@gmail.com</a>.</p>
-          <div class="notice">
-            <strong>
-              Legal advice:
-            </strong>
-The Constitution recognises privacy as a fundamental right under Article 43. However, this is limited in scope to the privacy of correspondence and other means of communication, and the protection of one’s ‘home’ against entry, search and seizure. This right is subject to reasonable restrictions imposed by law in the interests of the security of the State, public order, morality, or health. 
+      <!-- Layout -->
+      <div class="policy-layout">
+        <!-- Desktop TOC -->
+        <aside class="toc-desktop" aria-label="Table of contents">
+          <h2>Contents</h2>
+          <ol>
+            <li><a href="#summary">Quick Summary</a></li>
+            <li><a href="#bd-legal">Legal framework (Bangladesh)</a></li>
+            <li><a href="#collect">Information We Collect</a></li>
+            <li><a href="#use">How We Use Information</a></li>
+            <li><a href="#cookies">Cookies & Similar Technologies</a></li>
+            <li><a href="#sharing">Sharing & Disclosure</a></li>
+            <li><a href="#retention">Data Retention</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#transfers">International Transfers</a></li>
+            <li><a href="#rights">Your Rights & Choices</a></li>
+            <li><a href="#children">Children’s Privacy</a></li>
+            <li><a href="#dnt">Do Not Track</a></li>
+            <li><a href="#changes">Changes to This Policy</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </aside>
 
- 
+        <!-- Main article -->
+        <main class="policy-main">
+          <section id="summary">
+            <h2>Quick Summary</h2>
+            <p>This page explains what data I collect on this personal site, how I use it, and your choices. If anything is unclear, please email me at <a href="mailto:ishrakfarhan.b@gmail.com">ishrakfarhan.b@gmail.com</a>.</p>
+            <div class="notice"><strong>Not legal advice.</strong> This policy is tailored for a personal website with visitors in Bangladesh and abroad. It summarizes the local legal landscape and my practices in simple terms.</div>
+          </section>
 
-Federal laws 
+          <section id="bd-legal">
+            <h2>Legal framework (Bangladesh)</h2>
+            <p><strong>Constitutional privacy (Article 43):</strong> protects the privacy of correspondence and the home, subject to reasonable restrictions (state security, public order, morality, health).</p>
+            <p><strong>Cyber law:</strong> current cyber legislation addresses cyber-offences and enforcement powers (including search/seizure in specified cases). I run this site with a “data-minimization” approach: collect the least data necessary and disclose only when legally required.</p>
+            <p><strong>Sectoral laws:</strong> the Information and Communication Technology Act, 2006 and the Bangladesh Telecommunication Act, 2001 contain provisions relevant to confidentiality, interception, and telecommunications privacy.</p>
+            <p><strong>Data protection (developing):</strong> Bangladesh is working toward a cross-sectoral personal data protection framework. Until then, this policy sets out my commitments and the controls I offer to visitors.</p>
+          </section>
 
-Cyber Security Act, 2023 (CSA)
+          <section id="collect">
+            <h2>Information We Collect</h2>
+            <ul>
+              <li><strong>Information you provide:</strong> contact details you share via email or forms (e.g., name, email), and any content you voluntarily submit.</li>
+              <li><strong>Information collected automatically:</strong> basic log data (IP address, browser type, pages viewed, timestamps, referring URLs), approximate location (derived from IP), and essential cookies (see below).</li>
+            </ul>
+          </section>
 
-The CSA replaces the Digital Security Act of 2018 (DSA) but retains most of its provisions and makes only minor amendments. It prohibits the collection, selling, possession, provision, or usage of ‘identity information’ of a person, institution, company or any entity created by law (collectively termed as “person”), by another person without lawful authority. Identity information is defined as “any external, biological or physical information or any other information which singly or jointly can identify a person or a system”. These include name, photograph, address, physical or digital signature, national identity card, fingerprint, voice print, retina image, iris image, DNA profile, or any other identification which might be available with the advancement of technology. 
+          <section id="use">
+            <h2>How We Use Information</h2>
+            <ul>
+              <li>Operate, maintain, and improve this website.</li>
+              <li>Respond to messages and manage interactions you initiate.</li>
+              <li>Detect, prevent, and address security or abuse issues.</li>
+              <li>Comply with applicable laws and lawful requests.</li>
+            </ul>
+          </section>
 
-The CSA penalises offences such as illegally accessing critical information infrastructure and computers, illegally holding or transferring data owned by the government and financial authorities, among others. As per the CSA, the Government may, if it deems it necessary, preserve any information saved in a computer in interest of an investigation under the Act.
+          <section id="cookies">
+            <h2>Cookies & Similar Technologies</h2>
+            <p>I may use essential cookies to run the site (e.g., basic preferences). If I later add analytics or other optional cookies, I will update this policy and, where required, request consent. You can control cookies via your browser settings.</p>
+          </section>
 
-The CSA, like its predecessor allows law enforcement officials to conduct searches, seizures, and arrests without warrants when the relevant officer has reasonable grounds to believe that an offence under the Act has been committed or is likely to be committed, or that evidence may be lost, altered, or rendered unavailable.
+          <section id="sharing">
+            <h2>Sharing & Disclosure</h2>
+            <ul>
+              <li><strong>Service providers</strong> (if engaged): hosting or email delivery, under confidentiality obligations.</li>
+              <li><strong>Legal:</strong> to comply with valid legal processes or requests, or to protect rights, property, or safety.</li>
+            </ul>
+            <p><strong>Never sold.</strong> I do not sell your personal information.</p>
+          </section>
 
- 
+          <section id="retention">
+            <h2>Data Retention</h2>
+            <p>I keep personal information only as long as necessary for the purposes described above or to meet legal/accounting requirements. If you ask me to delete certain information and I have no legal reason to retain it, I will do so.</p>
+          </section>
 
-The Information and Communication Technology Act, 2006 (ICT Act)
+          <section id="security">
+            <h2>Security</h2>
+            <p>I use reasonable technical and organizational measures appropriate for a personal website (e.g., HTTPS, minimal data collection). No method is 100% secure; if you have concerns, please contact me.</p>
+          </section>
 
-The ICT Act was enacted to regulate information and communication technology in Bangladesh. It lays down offences such as breach of confidentiality and privacy by the disclosure of private information, among others. Section 46 of the ICT Act provides interception rights to the government in the interests of security of state and public order, among others.
+          <section id="transfers">
+            <h2>International Transfers</h2>
+            <p>This site may be hosted or processed outside Bangladesh. By using the site, you understand your data may be transferred to other countries. Where possible, I choose reputable providers and apply safeguards that are reasonable for a personal site.</p>
+          </section>
 
- 
+          <section id="rights">
+            <h2>Your Rights & Choices</h2>
+            <p>While a comprehensive, cross-sectoral data protection law is developing in Bangladesh, I voluntarily offer the following controls:</p>
+            <ul>
+              <li><strong>Access/Correction/Deletion:</strong> email me to access, correct, or delete personal data I hold about you.</li>
+              <li><strong>Consent withdrawal:</strong> if I ever rely on your consent (e.g., optional analytics), you can withdraw it at any time.</li>
+              <li><strong>Opt-out:</strong> disable non-essential cookies in your browser; I will honor browser/device settings where feasible.</li>
+            </ul>
+            <p><em>International visitors:</em> If you live in a jurisdiction with specific legal rights (e.g., EU/UK), contact me and I will apply the relevant standards to the extent they apply to this site.</p>
+          </section>
 
-The Penal Code, 1860
+          <section id="children">
+            <h2>Children’s Privacy</h2>
+            <p>This site is not directed to children under 13. I do not knowingly collect personal information from children.</p>
+          </section>
 
-The Penal Code, 1860 lays down offences punishable by imprisonment and fine. Section 509 of the Penal Code explicitly punishes the violation of the privacy of women with imprisonment and/or fine. 
+          <section id="dnt">
+            <h2>Do Not Track</h2>
+            <p>There is no industry standard for DNT signals, so this site does not currently respond to them. If this changes, I will update this policy.</p>
+          </section>
 
- 
+          <section id="changes">
+            <h2>Changes to This Policy</h2>
+            <p>I may update this page from time to time. I will post the new version here and update the “Last updated” date above.</p>
+          </section>
 
-The Bangladesh Telecommunication Act, 2001 (BTA)
+          <section id="contact">
+            <h2>Contact</h2>
+            <p><strong>Data Controller:</strong> Ishrak Farhan Bhuiyan</p>
+            <p><strong>Address:</strong> 8/3 Shantibag, Dhaka</p>
+            <p><strong>Email:</strong> <a href="mailto:ishrakfarhan.b@gmail.com">ishrakfarhan.b@gmail.com</a></p>
+            <p><strong>Phone:</strong> 01979525874</p>
+          </section>
+        </main>
+      </div>
 
-The BTA was enacted to regulate telecommunications systems and services in Bangladesh. The Bangladesh Telecommunication Regulatory Commission (BTRC) established under the Act is vested with, among other functions, ensuring the protection of the privacy of telecommunications under Section 30 of the BTA. Further, Section 67(B) protects telecommunications from interception or divulgence by any third-party. However, Section 97(A) (introduced in the  Bangladesh Telecommunications (Amendment) Act 2006) grants exceptions for interception by the State, on the grounds of national security and public order. The State may also require the telecommunications operator to retain records of specific users on the same grounds. </div>
-        </section>
-
-        <section id="info-we-collect">
-          <h3>2) Information We Collect</h3>
-          <div class="grid">
-            <div>
-              <p><strong>Information you provide</strong></p>
-              <ul>
-                <li>Account details (name, email, password).</li>
-                <li>Profile information (photo, preferences).</li>
-                <li>Content you submit (posts, messages, files).</li>
-              </ul>
-            </div>
-            <div>
-              <p><strong>Information collected automatically</strong></p>
-              <ul>
-                <li>Device and log data (IP, browser, timestamps, pages viewed, referral URLs).</li>
-                <li>Approximate location (derived from IP).</li>
-                <li>Cookies and similar technologies (see <a href="#cookies">Cookies</a>).</li>
-              </ul>
-            </div>
-          </div>
-          <p><strong>Information from third parties</strong>: If you connect third‑party services (e.g., Google, Facebook), we may receive identifiers and profile details as permitted by your settings with those services.</p>
-        </section>
-
-        <section id="how-we-use">
-          <h3>3) How We Use Information</h3>
-          <ul>
-            <li>Provide, maintain, and improve the Service.</li>
-            <li>Create and manage accounts; authenticate users.</li>
-            <li>Process payments and prevent fraud.</li>
-            <li>Send transactional messages (receipts, account alerts). You can opt out of non‑essential marketing emails.</li>
-            <li>Personalize content and measure performance.</li>
-            <li>Comply with legal obligations and enforce our terms.</li>
-          </ul>
-        </section>
-
-        <section id="legal-bases">
-          <h3>4) Legal Bases (EU/UK GDPR)</h3>
-          <p>Where GDPR applies, we process personal data under these bases:</p>
-          <ul>
-            <li><strong>Contract</strong>: To deliver our Service you asked for.</li>
-            <li><strong>Legitimate interests</strong>: e.g., to secure our Service and prevent abuse, balanced against your rights.</li>
-            <li><strong>Consent</strong>: For optional features like marketing or certain cookies; you may withdraw consent anytime.</li>
-            <li><strong>Legal obligation</strong>: To satisfy applicable laws (e.g., tax, accounting).</li>
-          </ul>
-        </section>
-
-        <section id="sharing">
-          <h3>5) Sharing & Disclosure</h3>
-          <p>We share information with:</p>
-          <ul>
-            <li><strong>Service providers</strong>: Hosting, analytics, email delivery, payments, customer support.</li>
-            <li><strong>Business transfers</strong>: In a merger, acquisition, or asset sale, data may be transferred as part of the transaction.</li>
-            <li><strong>Legal</strong>: To comply with valid legal requests or protect rights, safety, and property.</li>
-          </ul>
-          <p>We do not sell your personal information. If local law defines "sale" to include certain sharing (e.g., for targeted ads), see <a href="#rights">Your Rights</a> to exercise opt‑out choices.</p>
-        </section>
-
-        <section id="cookies">
-          <h3>6) Cookies & Similar Technologies</h3>
-          <p>We use cookies and similar technologies to run our Service and understand usage. You can control cookies via your browser settings. Optional cookies (e.g., analytics/ads) are used only with your consent where required. Consider linking a separate <em>Cookie Policy</em> with detailed categories and retention periods.</p>
-        </section>
-
-        <section id="analytics">
-          <h3>7) Analytics & Advertising</h3>
-          <p>If we use analytics or advertising partners, we may set cookies or collect identifiers to measure performance and deliver ads. Partners may combine information with data from other sites or apps. You can opt out via our settings or device ad preferences.</p>
-          <p><em>Example disclosure</em>: "We use Google Analytics with IP anonymization." Replace with your actual tools and provide links to their policies/opt‑outs.</p>
-        </section>
-
-        <section id="retention">
-          <h3>8) Data Retention</h3>
-          <p>We keep personal information only as long as necessary for the purposes described above, including to comply with legal, accounting, or reporting obligations. Retention periods vary by data type and context.</p>
-        </section>
-
-        <section id="security">
-          <h3>9) Security</h3>
-          <p>We implement reasonable technical and organizational measures to protect personal information. No method of transmission or storage is 100% secure; if you have security concerns, contact us at <a href="mailto:{{ishrakfarhan.b@gmail.com}}">ishrakfarhan.b@gmail.com</a>.</p>
-        </section>
-
-        <section id="international">
-          <h3>10) International Data Transfers</h3>
-          <p>Your information may be processed outside of your country. Where required, we use appropriate safeguards (e.g., standard contractual clauses) to protect transfers.</p>
-        </section>
-
-        <section id="rights">
-          <h3>11) Your Rights & Choices</h3>
-          <p>Your rights depend on where you live. Subject to exceptions, you may have rights to:</p>
-          <ul>
-            <li>Access, correct, or delete your personal information.</li>
-            <li>Object to or restrict certain processing.</li>
-            <li>Withdraw consent where processing is based on consent.</li>
-            <li>Data portability (receive a copy in a usable format).</li>
-          </ul>
-          <p><strong>California/Similar jurisdictions</strong>: You may have rights to know, delete, correct, limit use of sensitive personal info, and opt out of targeted advertising or sharing that constitutes a "sale". Use our <a href="{{PREFERENCE_CENTER_URL}}">Privacy Choices</a> or email us.</p>
-          <p>To exercise any rights, contact us at <a href="mailto:{{ishrakfarhan.b@gmail.com}}">ishrakfarhan.b@gmail.com</a>. We may ask you to verify your identity.</p>
-        </section>
-
-        <section id="children">
-          <h3>12) Children's Privacy</h3>
-          <p>Our Service is not directed to children under {{MINIMUM_AGE}}. We do not knowingly collect personal information from children. If you believe a child provided us information, contact us to delete it.</p>
-        </section>
-
-        <section id="dnt">
-          <h3>13) Do Not Track</h3>
-          <p>Some browsers send a "Do Not Track" (DNT) signal. Because there is no common industry standard, our Service does not currently respond to DNT signals. We will update this policy if that changes.</p>
-        </section>
-
-        <section id="changes">
-          <h3>14) Changes to This Policy</h3>
-          <p>We may update this Privacy Policy from time to time. We will post the new version on this page and update the <em>Last updated</em> date. If changes are material, we will notify you as required by law.</p>
-        </section>
-
-        <section id="contact">
-          <h3>15) Contact Us</h3>
-          <p>Data Controller: Ishrak Farhan Bhuiyan</p>
-          <p>Address: 8/3 Shantibag, Dhaka</p>
-          <p>Email: <a href="mailto:{{PRIVACY_EMAIL}}">ishrakfarhan.b@gmail.com</a></p>
-          <p>Phone: 01979525874</p>
-        </section>
-      </main>
-
-      <div class="foot">
-        <span class="muted">© Ishrak Farhan Bhuiyan - All Rights Reserved.</span>
-        <a class="btn" href="#top" aria-label="Back to top">Back to top ↑</a>
+      <!-- Footer row inside the card -->
+      <div class="policy-foot">
+        <span class="muted">© Ishrak Farhan Bhuiyan — All rights reserved.</span>
+        <a class="btn" href="#top" style="text-decoration:none;border:1px solid var(--line);padding:.5rem .8rem;border-radius:10px;background:#fff;color:var(--ink)">Back to top ↑</a>
       </div>
     </div>
   </div>
 
-  <a href="#top" class="top" aria-label="Back to top">↑</a>
+  <a href="#top" class="to-top" aria-label="Back to top">↑</a>
 </body>
 </html>
