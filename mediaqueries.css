@@ -1,1 +1,103 @@
+/* ===========================
+   mediaqueries.css
+   All responsive rules only
+   =========================== */
 
+/* ---------- ≥1200px (desktop-wide) ---------- */
+@media (min-width: 1200px) {
+  .nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .nav-toggle { 
+    display: none; /* ensure hidden on wide screens */
+  }
+}
+
+/* ---------- ≤1200px (tablet & mobile header/menu) ---------- */
+@media (max-width: 1200px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 14px 20px;
+    background: #fff;
+  }
+
+  .nav-toggle {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  /* closed by default; opened via .open */
+  .nav {
+    display: none;
+  }
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 100%;
+    padding: 14px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    max-height: 70vh;
+    overflow: auto;
+    z-index: 1001;
+  }
+
+  .nav-link { padding: 10px 8px; }
+}
+
+/* ---------- ≤1000px (mobile) ---------- */
+@media (max-width: 1000px) {
+  /* Keep nav hidden (covered by ≤1200px too, but ok to repeat for clarity) */
+  .nav { display: none; }
+
+  /* Hero becomes stacked and card-like on mobile */
+  .hero {
+    display: flex;               /* ensure flex on mobile */
+    flex-direction: column;      /* stack */
+    align-items: center;         /* center */
+    min-height: auto;
+    padding: 20px;
+    background: none !important; /* remove desktop bg image */
+  }
+  .hero::before { 
+    display: none !important;    /* remove overlay */
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    color: black;
+  }
+
+  /* Target only the profile photo, not every <img> in .hero */
+  .hero-photo {
+    display: block;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 0 18px 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 680px;
+    background: rgba(255,255,255,.9);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+}
