@@ -8,8 +8,7 @@ img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 
 /* Theme */
-:root
-{
+:root {
   --bg: #f4f7fb;      /* light grayish blue */
   --ink: #0b1635;     /* Cyprus */
   --muted: #6c7a91;   /* Noble blue */
@@ -20,8 +19,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* Base */
-body
-{
+body {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(90deg, #f4f7fb 0%, #f7f9fd 50%, #f1f5fb 100%);
@@ -29,14 +27,12 @@ body
 }
 
 /* Headings use Poppins */
-h1,h2,h3,.brand-text,.nav-link
-{
+h1,h2,h3,.brand-text,.nav-link {
   font-family: "Poppins", sans-serif;
 }
 
 /* ---------- Header ---------- */
-.site-header
-{
+.site-header {
   position: relative;
   z-index:1001;
   background:var(--bg);
@@ -46,170 +42,36 @@ h1,h2,h3,.brand-text,.nav-link
   padding: 8px 24px;
 }
 
-.brand
-{ display:flex; align-items:center; gap:10px; font-weight:700; }
+.brand { display:flex; align-items:center; gap:10px; font-weight:700; }
 
-.brand-mark
-{
-  width: 40px; 
-  height: 40px; 
+.brand-mark {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: var(--accent); color: #fff;
-  display:flex; justify-content:center; 
+  display:flex; justify-content:center;
   align-items:center;
-  font-weight:800; 
+  font-weight:800;
   font-family:"Poppins",sans-serif;
   font-size: 22px;
   line-height: 1.2;
 }
 
-.brand-text{ font-size:24px; }
-.nav{ display:flex; gap:24px; justify-content:right; }
-.nav-link{ font-weight:600; font-size:16px; color:#3b4a67; }
-.nav-link:hover{ 
-    color:var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 1rem;
-    text-decoration-color: rgba(255,75,119,.35); }
-
-
-
-
-    /* Default: desktop shows nav, hides hamburger */
-.nav-toggle 
-{ 
-    display: none; 
+.brand-text { font-size:24px; }
+.nav { display:flex; gap:24px; justify-content:right; }
+.nav-link { font-weight:600; font-size:16px; color:#3b4a67; }
+.nav-link:hover {
+  color:var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgba(255,75,119,.35);
 }
 
-@media (min-width: 1200px)
-{
-  .nav 
-  { 
-    display: flex; 
-    gap: 24px; 
-    align-items: center; 
-}
-  .nav-toggle { display: none; }                                        /* ensure hidden on wide screens */
-}
+/* Default: desktop shows nav, hides hamburger */
+.nav-toggle { display: none; }
 
-
-/* Mobile/tablet: hamburger visible, nav hidden until opened */
-@media (max-width: 1200px)
-{
-  .site-header
-  {
-    position: sticky; top: 0; z-index: 1000;   /* keep on top */
-    padding: 14px 20px;                         /* tighter header on mobile */
-    background: #fff;                           /* so dropdown sits on solid bg */
-  }
-  
-  .nav-toggle
-  {
-    display: block;
-    font-size: 24px;
-    background: none; border: none; cursor: pointer;
-    margin-left: auto;                          /* push button to the right */
-  }
-
-
-  /* start hidden on mobile */
-  .nav { display: none; }
-
-
-  /* when opened via JS, show as a dropdown panel */
-  .nav.open
-  {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    position: absolute;
-    left: 16px; right: 16px; top: 100%;         /* below the header */
-    padding: 14px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    max-height: 70vh;                           /* if many items… */
-    overflow: auto;                             /* …scroll instead of cutting off */
-    z-index: 1001;
-  }
-
-  .nav-link{ padding: 10px 8px; }
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width: 1000px)
-{
-  
-  .nav{ display:none; }
-  
-  .hero{
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;         /* vertical center */
-  justify-content: flex-start;
-  padding: 60px;
-  background-image: url("images/website-home-page-1.png"); /* rename safely */
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: cover;
-}
-
-  @media (max-width: 1000px) 
-  {
-  .hero 
-    {
-    background: url("images/website-home-page-1.png") no-repeat center center / cover;
-    background-attachment: scroll;
-  }
-  }
-  
-.hero::before
-  {
-  content:"";
-  position:absolute; inset:0;
-  background: linear-gradient(
-    90deg,
-    rgba(255,255,255,.9) 0%,
-    rgba(255,255,255,.75) 40%,
-    rgba(255,255,255,0) 70%
-  );
-  pointer-events:none;
-  z-index:0;
-}
-
-.hero-text
-  {
-  position: relative;
-  z-index: 1;
-  width: 50%;                  /* restrict to left half */
-  max-width: 650px;
-  padding: 30px;
-  border-radius: 20px;
-  background: rgba(255,255,255,.85);
-  box-shadow: 0 6px 20px rgba(0,0,0,.08);
-}
-
-/* --- Mobile: full width text --- */
-@media (max-width: 1000px)
-  {
-  .hero{
-    padding: 40px 20px;
-    background-position: center;
-    background-attachment: scroll;
-  }
-  .hero-text
-    {
-    width: 100%;                /* allow full width on phones */
-    padding: 20px;
-    background: rgba(255,255,255,.9);
-    }
-}
-}
-
-/* ---------- Hero with background photo ---------- */
-.hero
-{
+/* ---------- Hero (desktop/base) ---------- */
+.hero {
   position: relative;
   min-height: 100vh;               /* full viewport */
   display: flex;
@@ -222,8 +84,7 @@ h1,h2,h3,.brand-text,.nav-link
 }
 
 /* Optional: subtle left-to-right overlay for readability */
-.hero::before
-{
+.hero::before {
   content:"";
   position: absolute; inset: 0;
   background: linear-gradient(90deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.55) 36%, rgba(255,255,255,.10) 70%, rgba(255,255,255,0) 100%);
@@ -231,8 +92,7 @@ h1,h2,h3,.brand-text,.nav-link
 }
 
 /* Boxed description area (no border) in the left corner */
-.hero-text
-{
+.hero-text {
   position: relative;               /* above the overlay */
   z-index: 1;
   max-width: 680px;
@@ -241,9 +101,22 @@ h1,h2,h3,.brand-text,.nav-link
   background: rgba(255,255,255,.88);/* “boxed” look without a border */
 }
 
-/* Eyebrow/heading styles (optional, match the mockup feel) */
-.eyebrow
-{
+.hero-title { margin:0 0 10px 0; line-height:1.05; }
+
+.hero-title .line-1 {
+  display:block; text-transform:uppercase;
+  font-weight:800; color:var(--brand);
+  font-size:clamp(36px,6vw,74px);
+}
+
+.hero-title .line-2 {
+  display:block; text-transform:uppercase;
+  font-weight:900; color:var(--accent);
+  font-size:clamp(40px,6.2vw,78px);
+}
+
+/* Eyebrow/heading styles */
+.eyebrow {
   font-family:"Poppins",sans-serif;
   letter-spacing:.1em;
   text-transform:uppercase;
@@ -252,145 +125,75 @@ h1,h2,h3,.brand-text,.nav-link
   margin:0 0 2.5px 0;
 }
 
-.hero-title{ margin:0 0 10px 0; line-height:1.05; }
-
-.hero-title .line-1
-{
-  display:block; text-transform:uppercase;
-  font-weight:800; color:var(--brand);
-  font-size:clamp(36px,6vw,74px);
-}
-
-.hero-title .line-2
-{
-  display:block; text-transform:uppercase;
-  font-weight:900; color:var(--accent);
-  font-size:clamp(40px,6.2vw,78px);
-}
-
-.subtitle
-{
+.subtitle {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.8;
   margin: 14px 0 18px 0;
-  text-align: justify;              /* <— justified as requested */
+  text-align: justify;
 }
 
 /* ---------- Buttons ---------- */
-.btn
-{
+.btn {
   display:inline-flex; align-items:center; gap:10px;
   padding:12px 24px; border-radius:999px; font-weight:700;
   transition:all 0.2s ease; border:2px solid transparent;
 }
 
-.btn-primary
-{
+.btn-primary {
   background: linear-gradient(180deg,var(--accent),var(--accent-2));
   color:#fff; box-shadow:0 6px 16px rgba(255,75,119,.35);
 }
 
-.btn-primary:hover{ transform:translateY(-2px); }
+.btn-primary:hover { transform:translateY(-2px); }
 
-.btn-ghost
-{
-  background:#fff; border-color:#e5e9f5; color:var(--ink);
+.btn-ghost {
+  background:#fff; border-color:#e5e9f5; color: var(--ink);
 }
 
-.btn-ghost:hover{ border-color:#d0d7e6; }
-
 /* ---------- Links Section (under bio) ---------- */
-.links
-{
+.links {
   margin:18px 0 6px 0;
   display:flex; gap:14px; flex-wrap:wrap;
 }
-.links a
-{
+.links a {
   display:inline-flex; align-items:center; gap:8px;
   background:#fff; border:2px solid var(--brand);
   padding:10px 18px; border-radius:999px;
   font-weight:600; color:var(--brand);
   transition:all 0.2s ease;
 }
-.links a:hover{ background:var(--brand); color:#fff; }
-.links a i{ font-size:18px; }
+.links a:hover { background:var(--brand); color:#fff; }
+.links a i { font-size:18px; }
 
-
-
-.form-container 
-{
+/* ---------- Forms (contact) ---------- */
+.form-container {
   display: flex;
-  justify-content: center;   /* horizontal center */
-  align-items: center;       /* vertical center (if using full height) */
-  min-height: 80vh;          /* pushes form towards center of screen */
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
 }
 
-form 
-{
-  background: var(--bg);     /* uses your theme */
+form {
+  background: var(--bg);
   padding: 20px 30px;
   border: 1px solid var(--muted);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   width: 100%;
-  max-width: 400px;          /* controls size */
+  max-width: 400px;
 }
-
 
 /* ---------- Footer ---------- */
-footer 
-{
-  background: var(--bg);           /* match header color */
-  color: var(--ink);               /* text in light color */
-  padding: 4px 0px;
-  text-align: center;
-  font-size: 0.85rem;
-  margin-top: 4px;
-  
-  padding: 6px 0;
-  font-size: 0.85rem;
-}
-
-footer .footer-links 
-{
-  margin-bottom: 4px;
-  padding: 1px 0;
-}
-
-footer .footer-links a 
-{
-  color: var(--ink);               /* links same as footer text */
-  margin: 0 14px;
-  
-  font-size: 0.6rem;
-  transition: color 0.3s ease;
-}
-
-footer .footer-links a:hover 
-{
-  color: var(--accent);            /* highlight with brand color */
-  text-decoration: underline;
-  text-underline-offset: .1rem;
-  text-decoration-color: rgba(255,75,119,.35);
-}
-
-footer .footer-bottom 
-{
-  margin: 5;
-  border-top: 1px solid var(--muted); /* subtle line */
-  padding: 0px;
-  font-size: 0.6rem;
-  line-height: .1;
-  opacity: 0.8;
-}
-
-
 footer {
-  background: var(--bg);   /* match header color */
+  background: var(--bg);
   color: var(--ink);
   text-align: center;
   padding: .1px 0;
-  font-size: 0.02rem;
+  font-size: 0.02rem; /* NOTE: matches your existing file; adjust if unintended */
+}
+
+/* ---------- Base state for profile image (hidden on desktop) ---------- */
+.hero-photo {
+  display: none;
 }
