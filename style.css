@@ -167,6 +167,7 @@ h1,h2,h3,.brand-text,.nav-link {
 .links a:hover { background:var(--brand); color:#fff; }
 .links a i { font-size:18px; }
 
+
 /* ---------- Forms (contact) ---------- */
 .form-container {
   display: flex;
@@ -202,8 +203,8 @@ footer .footer-links {
 
 footer .footer-links a {
   color: var(--ink);          /* same as text */
-  margin: 0 14px;
-  font-size: .8rem;
+  margin: 0 10px;
+  font-size: .75rem;
   transition: color 0.3s ease;
 }
 
