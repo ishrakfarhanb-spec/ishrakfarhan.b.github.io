@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanks! | Ishrak Farhan</title>
+
+  <!-- Your site styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Include if you split responsive rules -->
+  <link rel="stylesheet" href="mediaqueries.css" />
+
+  <style>
+    /* Page-specific minimal styling */
+    body { background: #ffffff; }
+    .wrap {
+      max-width: 720px;
+      margin: 48px auto;
+      padding: 0 16px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e6eaf1;
+      border-radius: 16px;
+      padding: 28px 22px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.06);
+      text-align: center;
+    }
+    .card h1 {
+      margin: 0 0 6px 0;
+      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+    .card p { color: #5b6b84; margin: 0 0 14px 0; }
+    .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: 1px solid #e6eaf1;
+      text-decoration: none;
+      color: var(--ink);
+      background: #fff;
+      transition: box-shadow .15s ease, transform .1s ease;
+      font-weight: 600;
+    }
+    .btn:hover { box-shadow: 0 8px 22px rgba(0,0,0,.08); transform: translateY(-1px); }
+    .btn-primary {
+      border-color: var(--brand);
+      color: #fff;
+      background: var(--brand);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Site header -->
+  <div data-include="header"></div>
+
+  <main class="wrap">
+    <div class="card" role="status" aria-live="polite">
+      <h1>Thanks for your message! 🎉</h1>
+      <p>Your feedback has been received. I’ll get back to you as soon as I can.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="index.html">← Back to Home</a>
+        <a class="btn" href="contact.html">Contact page</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site footer -->
+  <div data-include="footer"></div>
+
+  <!-- Layout/menus loader (use the variant your site uses) -->
+  <script src="assets/layout-loader.js" defer></script>
+  <script src="assets/menu.js" defer></script>
+  <!-- If your other pages use the /ishrakfarhan... path instead, swap to these: -->
+  <!-- <script src="/ishrakfarhan.b.github.io/assets/js/layout-loader.js" defer></script> -->
+  <!-- <script src="/ishrakfarhan.b.github.io/assets/js/menu.js" defer></script> -->
+</body>
+</html>
