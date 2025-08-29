@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback Form | Ishrak Farhan</title>
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Optional: if you created this earlier -->
+  <link rel="stylesheet" href="mediaqueries.css" />
+
+  <style>
+    /* Force absolute white page bg (same as your old contact page) */
+    body { background: #ffffff !important; }
+
+    /* Card styling moved over from your original contact page */
+    .form-shell {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    form {
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.5);
+    }
+
+    form h2 {
+      text-align: center;
+      margin-bottom: 22px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      border: 0px solid var(--muted);
+      border-radius: 20px;
+      background: #f5efef;
+      font-size: 0.95rem;
+      outline: none;
+      transition: box-shadow 0.2s;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      box-shadow: 0 0 0 2px var(--brand);
+      background: #fff;
+    }
+
+    form textarea {
+      border-radius: 20px;
+      resize: vertical;
+    }
+
+    form button {
+      width: 100%;
+      background: #2445f1;
+      color: #ffffff;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 24px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #ff4f79;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--brand);
+    }
+    .back-link:hover { text-decoration: underline; text-underline-offset: .2rem; }
+  </style>
+</head>
+
+<body>
+  <div data-include="header"></div>
+
+  <!-- PAGE TITLE -->
+  <div style="text-align:center; padding:32px 16px 8px;">
+    <h1 class="hero-title"><span class="line-1">Feedback Form</span></h1>
+  </div>
+
+  <!-- FORM CONTENT -->
+  <section class="form-shell">
+    <form>
+      <h2>FEEDBACK FORM</h2>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter Name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter email" required />
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Enter message" rows="5" required></textarea>
+
+      <button type="submit">Submit →</button>
+    </form>
+
+    <a class="back-link" href="contact.html">
+      <i class="fa-solid fa-arrow-left"></i> Back to Contact
+    </a>
+  </section>
+
+  <div data-include="footer"></div>
+
+  <script src="/ishrakfarhan.b.github.io/assets/js/layout-loader.js" defer></script>
+  <script src="/ishrakfarhan.b.github.io/assets/js/menu.js" defer></script>
+</body>
+</html>
