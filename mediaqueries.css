@@ -4,7 +4,7 @@
    =========================== */
 
 /* ---------- ≥1200px (desktop-wide) ---------- */
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .nav {
     display: flex;
     gap: 24px;
@@ -16,7 +16,7 @@
 }
 
 /* ---------- ≤1200px (tablet & mobile header/menu) ---------- */
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
   .site-header {
     position: sticky;
     top: 0;
@@ -59,7 +59,7 @@
 }
 
 /* ---------- ≤1000px (mobile) ---------- */
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
   /* Keep nav hidden (covered by ≤1200px too, but ok to repeat for clarity) */
   .nav { display: none; }
 
