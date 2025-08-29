@@ -112,27 +112,34 @@
 
   <!-- FORM CONTENT -->
   <section class="form-shell">
-    <form>
-      <h2>FEEDBACK FORM</h2>
+    <!-- form.html -->
+<form id="feedback-form">
+  <!-- keep your existing fields exactly as they are -->
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" placeholder="Enter Name" required />
 
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter Name" required />
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Enter email" required />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter email" required />
+  <label for="subject">Subject:</label>
+  <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
 
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" placeholder="Enter message" rows="5" required></textarea>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="Enter message" rows="5" required></textarea>
+  <button type="submit">Submit →</button>
+</form>
 
-      <button type="submit">Submit →</button>
-    </form>
+<script>
+  // Redirect to thankyou.html without sending data anywhere
+  const form = document.getElementById('feedback-form');
+  form.addEventListener('submit', (e) => {
+    // If fields are invalid, browser blocks submit before this runs—so we’re safe.
+    e.preventDefault();
+    window.location.href = 'thankyou.html'; // or use your absolute URL if you prefer
+  });
+</script>
 
-    <a class="back-link" href="contact.html">
-      <i class="fa-solid fa-arrow-left"></i> Back to Contact
-    </a>
   </section>
 
   <div data-include="footer"></div>
