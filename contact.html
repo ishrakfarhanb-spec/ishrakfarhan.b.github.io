@@ -2,91 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1", viewport-fit=cover />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Ishrak Farhan</title>
 
   <!-- Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <!-- Optional: if you created this earlier -->
+  <link rel="stylesheet" href="mediaqueries.css" />
 
   <style>
-    /* Force absolute white page bg */
-    body 
-    {
-      background: #ffffff !important;
-    }
+    /* Keep the page background consistent */
+    body { background: #ffffff !important; }
 
-    /* Form as white card with shadow, no border */
-    form {
-      max-width: 450px;
+    .contact-wrap {
+      max-width: 720px;
       margin: 0 auto;
-      padding: 20px;
-      background: #fff;
-      border: none; /* remove any thin line */
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,.5); /* subtle shadow only */
-    }
-
-    form h2 {
+      padding: 24px 16px 40px;
       text-align: center;
-      margin-bottom: 30px;
-      font-family: "Poppins", sans-serif;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 16px 0 8px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: #2445f1;
+      color: #fff;
       font-weight: 700;
-      color: var(--ink);
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      text-align: left;
-    }
-
-    form input,
-    form textarea {
-      width: 100%;
-      padding: 12px 14px;
-      margin-bottom: 16px;
-      border: 0px solid var(--muted); /* keep borders for fields */
-      border-radius: 20px;
-      background: #f5efef;
-      font-size: 0.95rem;
-      outline: none;
-      transition: box-shadow 0.2s;
-    }
-
-    form input:focus,
-    form textarea:focus {
-      box-shadow: 0 0 0 2px var(--brand);
-      background: #fff;
-    }
-
-    form textarea {
-      border-radius: 20px;
-      resize: vertical;
-    }
-
-    form button {
-      width: 100%;
-      background: #2445f1; /* pink submit button */
-      color: #ffffff;
-      padding: 12px;
-      font-size: 1rem;
-      font-weight: 600;
       border: none;
-      border-radius: 24px;
-      cursor: pointer;
-      transition: background 0.3s;
+      text-decoration: none;
+      box-shadow: 0 8px 22px rgba(36,69,241,.25);
+      transition: transform .15s ease, box-shadow .2s ease;
     }
-
-    form button:hover {
-      background: #ff4f79;
-    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(36,69,241,.32); }
 
     .contact-info {
-      text-align: center;
-      margin-top: 16px;
+      margin-top: 18px;
       font-size: 0.95rem;
     }
     .contact-info p { margin: 10px 0; }
@@ -94,7 +49,6 @@
 </head>
 
 <body>
-  
   <div data-include="header"></div>
 
   <!-- CONTACT TITLE -->
@@ -102,40 +56,21 @@
     <h1 class="hero-title"><span class="line-1">Contact</span></h1>
   </div>
 
-  <!-- FEEDBACK FORM -->
-  <section>
-    <form>
-      <h2>FEEDBACK FORM</h2>
+  <section class="contact-wrap">
+    <a class="cta" href="form.html">
+      <i class="fa-solid fa-pen-to-square"></i>
+      Open Feedback Form →
+    </a>
 
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter Name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter email" required />
-
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="Enter message" rows="5" required></textarea>
-
-      <button type="submit">Submit →</button>
-    </form>
-
-    <!-- CONTACT INFO -->
     <div class="contact-info">
       <br><p><i class="fa-solid fa-phone"></i> +880-19795-25874</p>
       <p><i class="fa-solid fa-envelope"></i> ishrakfarhan.b@gmail.com</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <br><br>
-    
   <div data-include="footer"></div>
 
-<script src="/ishrakfarhan.b.github.io/assets/js/layout-loader.js" defer></script>
-<script src="/ishrakfarhan.b.github.io/assets/js/menu.js" defer></script>
-  
+  <script src="/ishrakfarhan.b.github.io/assets/js/layout-loader.js" defer></script>
+  <script src="/ishrakfarhan.b.github.io/assets/js/menu.js" defer></script>
 </body>
 </html>
