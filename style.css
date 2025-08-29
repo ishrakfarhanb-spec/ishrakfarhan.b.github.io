@@ -252,15 +252,6 @@ h1,h2,h3,.brand-text,.nav-link
   margin:0 0 2.5px 0;
 }
 
-/* ---------- Eyebrow Animation ---------- */
-.eyebrow {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 500;
-  overflow: hidden;
-}
-
 .hero-title{ margin:0 0 10px 0; line-height:1.05; }
 
 .hero-title .line-1
