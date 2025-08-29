@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms & Conditions | Ishrak Farhan</title>
+  <meta name="description" content="Terms & Conditions for Ishrak Farhan Bhuiyan (Bangladesh-focused personal website).">
+
+  <!-- Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #ffffff;
+      --ink: #0b1324;
+      --muted: #5b6b84;
+      --line: #e6eaf1;
+      --brand: #1f3af2;
+      --brand-ink: #12206f;
+      --badge: #f1f5ff;
+      --code: #f6f8fb;
+    }
+
+    /* Base / reset */
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #0b1324 0%, #101b34 100%);
+      line-height: 1.65;
+    }
+
+    /* Page wrap */
+    .doc-wrap { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+
+    /* Card */
+    .doc-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+      overflow: hidden;
+    }
+
+    /* Header */
+    .doc-header {
+      display: flex; align-items: center; gap: 14px;
+      padding: 28px 28px 18px 28px; border-bottom: 1px dashed var(--line);
+    }
+    .doc-logo {
+      width: 50px; height: 50px; display: grid; place-items: center;
+      border-radius: 12px; background: var(--brand); color: #fff;
+      font-weight: 700; font-family: "Poppins", sans-serif;
+    }
+    .doc-title h1 {
+      margin: 0; font-family: "Poppins", sans-serif; font-weight: 700;
+      letter-spacing: .2px; font-size: clamp(1.6rem, 2.4vw, 2.2rem); color: var(--brand-ink);
+    }
+    .doc-title .muted { color: var(--muted); font-weight: 500; margin-top: 2px; }
+
+    /* Meta bar */
+    .doc-meta {
+      padding: 12px 28px 18px 28px; border-bottom: 1px dashed var(--line);
+      display: grid; gap: 4px; grid-template-columns: 1fr;
+    }
+    .doc-meta small { color: var(--muted); }
+    .badge {
+      display: inline-block; padding: .2rem .55rem; background: var(--badge); color: var(--brand-ink);
+      border: 1px solid var(--line); border-radius: 999px; font-size: .8rem;
+    }
+
+    /* Layout */
+    .doc-layout {
+      display: grid; grid-template-columns: 280px 1fr; gap: 24px; padding: 18px 24px 28px 24px;
+    }
+
+    /* Desktop TOC */
+    .toc-desktop {
+      position: sticky; top: 18px; align-self: start;
+      border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: #fff;
+    }
+    .toc-desktop h2 {
+      font-size: .95rem; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
+    }
+    .toc-desktop ol { margin: 0; padding-left: 18px; }
+    .toc-desktop a { color: var(--brand-ink); text-decoration: none; }
+    .toc-desktop a:hover { text-decoration: underline; }
+
+    /* Mobile TOC */
+    .toc-mobile { display: none; padding: 0 24px; border-bottom: 1px dashed var(--line); background: #fff; }
+    .toc-mobile summary { cursor: pointer; padding: 14px 0; font-weight: 600; color: var(--brand-ink); list-style: none; }
+    .toc-mobile summary::marker { display: none; }
+    .toc-mobile ol { margin: 0 0 14px 0; padding-left: 22px; }
+
+    /* Main article */
+    .doc-main { min-width: 0; }
+    .doc-main section { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .doc-main section:last-child { border-bottom: none; }
+
+    /* Heading numbering */
+    .doc-main { counter-reset: sec; }
+    .doc-main h2 {
+      counter-increment: sec; position: relative; margin: 0 0 8px 0;
+      font-family: "Poppins", sans-serif; font-weight: 600; color: var(--ink);
+      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+    }
+    .doc-main h2::before { content: counter(sec) ") "; color: var(--brand-ink); font-weight: 700; }
+
+    p, li { color: var(--ink); }
+    .muted { color: var(--muted); }
+    .note {
+      background: #eef2ff; border: 1px solid #dbe2ff; color: #142265;
+      padding: .75rem 1rem; border-radius: 10px;
+    }
+
+    /* Footer row in card */
+    .doc-foot {
+      display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between;
+      padding: 16px 24px; border-top: 1px dashed var(--line); background: #fafbff;
+    }
+
+    /* Back-to-top */
+    .to-top {
+      position: fixed; right: 18px; bottom: 18px; width: 44px; height: 44px; border-radius: 50%;
+      display: grid; place-items: center; background: var(--brand); color: #fff; text-decoration: none;
+      box-shadow: 0 10px 24px rgba(31,58,242,.35);
+    }
+
+    /* Anchor offset */
+    .doc-main h2, .doc-main section { scroll-margin-top: 80px; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .doc-layout { grid-template-columns: 1fr; gap: 8px; }
+      .toc-desktop { display: none; }
+      .toc-mobile { display: block; }
+    }
+
+    /* Print */
+    @media print {
+      body { background: #fff; }
+      .doc-wrap { margin: 0; padding: 0; }
+      .to-top, .toc-mobile { display: none !important; }
+      .doc-card { box-shadow: none; border: none; }
+      .doc-layout { display: block; padding: 0 24px 24px 24px; }
+      .toc-desktop { float: right; width: 35%; margin: 0 0 0 24px; border: 1px solid #ddd; }
+      .doc-foot { background: none; border-top: 1px solid #ddd; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="doc-wrap">
+    <div class="doc-card" id="top">
+      <!-- Header -->
+      <header class="doc-header">
+        <div class="doc-logo" aria-hidden="true">T&C</div>
+        <div class="doc-title">
+          <h1>Terms & Conditions</h1>
+          <div class="muted">For Ishrak Farhan Bhuiyan</div>
+        </div>
+      </header>
+
+      <!-- Meta -->
+      <div class="doc-meta">
+        <small><strong>Website:</strong> https://ishrakfarhanb-spec.github.io/ishrakfarhan.b.github.io/</small>
+        <small><strong>Effective date:</strong> 30/08/2025</small>
+        <small class="badge">Last updated: 30 Aug 2025</small>
+      </div>
+
+      <!-- Mobile TOC -->
+      <nav class="toc-mobile" aria-label="Table of contents (mobile)">
+        <details>
+          <summary>Table of contents</summary>
+          <ol>
+            <li><a href="#intro">Introduction & Acceptance</a></li>
+            <li><a href="#who">Who We Are & Contact</a></li>
+            <li><a href="#eligibility">Eligibility & Accounts</a></li>
+            <li><a href="#license">License & Use of the Site</a></li>
+            <li><a href="#content">Your Content & Feedback</a></li>
+            <li><a href="#prohibited">Prohibited Uses</a></li>
+            <li><a href="#ip">Intellectual Property</a></li>
+            <li><a href="#thirdparty">Third-Party Links & Services</a></li>
+            <li><a href="#disclaimers">Disclaimers</a></li>
+            <li><a href="#liability">Limitation of Liability</a></li>
+            <li><a href="#indemnity">Indemnification</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#law">Governing Law & Dispute Resolution</a></li>
+            <li><a href="#changes">Changes to These Terms</a></li>
+            <li><a href="#termination">Termination</a></li>
+            <li><a href="#misc">Miscellaneous</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </details>
+      </nav>
+
+      <!-- Layout -->
+      <div class="doc-layout">
+        <!-- Desktop TOC -->
+        <aside class="toc-desktop" aria-label="Table of contents">
+          <h2>Contents</h2>
+          <ol>
+            <li><a href="#intro">Introduction & Acceptance</a></li>
+            <li><a href="#who">Who We Are & Contact</a></li>
+            <li><a href="#eligibility">Eligibility & Accounts</a></li>
+            <li><a href="#license">License & Use of the Site</a></li>
+            <li><a href="#content">Your Content & Feedback</a></li>
+            <li><a href="#prohibited">Prohibited Uses</a></li>
+            <li><a href="#ip">Intellectual Property</a></li>
+            <li><a href="#thirdparty">Third-Party Links & Services</a></li>
+            <li><a href="#disclaimers">Disclaimers</a></li>
+            <li><a href="#liability">Limitation of Liability</a></li>
+            <li><a href="#indemnity">Indemnification</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#law">Governing Law & Dispute Resolution</a></li>
+            <li><a href="#changes">Changes to These Terms</a></li>
+            <li><a href="#termination">Termination</a></li>
+            <li><a href="#misc">Miscellaneous</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </aside>
+
+        <!-- Main -->
+        <main class="doc-main">
+          <section id="intro">
+            <h2>Introduction & Acceptance</h2>
+            <p>These Terms & Conditions (“Terms”) govern your access to and use of this personal website (the “Site”). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, you must not use the Site.</p>
+            <p class="note"><strong>Plain language note:</strong> This is a personal website. Content is offered “as-is” for informational and creative purposes only.</p>
+          </section>
+
+          <section id="who">
+            <h2>Who We Are & Contact</h2>
+            <p>This Site is operated by <strong>Ishrak Farhan Bhuiyan</strong> (“I”, “me”, or “my”).</p>
+            <ul>
+              <li><strong>Address:</strong> 8/3 Shantibag, Dhaka</li>
+              <li><strong>Email:</strong> <a href="mailto:ishrakfarhan.b@gmail.com">ishrakfarhan.b@gmail.com</a></li>
+              <li><strong>Phone:</strong> 01979525874</li>
+            </ul>
+          </section>
+
+          <section id="eligibility">
+            <h2>Eligibility & Accounts</h2>
+            <p>This Site is intended for individuals who can form a binding contract under applicable law. I do not operate user accounts on the Site at this time. If account features are added later, additional terms may apply.</p>
+          </section>
+
+          <section id="license">
+            <h2>License & Use of the Site</h2>
+            <p>I grant you a limited, non-exclusive, revocable, non-transferable license to access and use the Site for your personal, non-commercial use, subject to these Terms.</p>
+            <p>You agree not to: (a) copy, modify, or create derivative works of the Site; (b) reverse-engineer or attempt to extract source code (except to the extent such restrictions are prohibited by law); (c) use the Site for any unlawful purpose; (d) bypass or interfere with security features.</p>
+          </section>
+
+          <section id="content">
+            <h2>Your Content & Feedback</h2>
+            <p>If you submit content (e.g., messages via a form) or feedback, you represent that you have the necessary rights to do so. You grant me a non-exclusive, royalty-free license to use and display such content for the purpose of operating the Site and responding to you. You remain responsible for your content and agree not to submit anything unlawful or infringing.</p>
+          </section>
+
+          <section id="prohibited">
+            <h2>Prohibited Uses</h2>
+            <ul>
+              <li>Violating any applicable law or regulation.</li>
+              <li>Infringing intellectual property or privacy rights.</li>
+              <li>Uploading malicious code, attempting unauthorized access, or disrupting the Site.</li>
+              <li>Harassing, defaming, or otherwise harming others.</li>
+              <li>Automated scraping or bulk data extraction without permission.</li>
+            </ul>
+          </section>
+
+          <section id="ip">
+            <h2>Intellectual Property</h2>
+            <p>All content on the Site (including text, images, graphics, and design) is owned by or licensed to me and is protected by copyright and other laws. Except as expressly permitted by these Terms, you may not reproduce, distribute, or publicly display any content without prior written consent.</p>
+          </section>
+
+          <section id="thirdparty">
+            <h2>Third-Party Links & Services</h2>
+            <p>The Site may contain links to third-party websites or services. I am not responsible for their content, policies, or practices. Accessing third-party sites is at your own risk, and you should review their terms and policies.</p>
+          </section>
+
+          <section id="disclaimers">
+            <h2>Disclaimers</h2>
+            <p><strong>AS-IS / AS-AVAILABLE.</strong> The Site and its content are provided “as-is” and “as-available” without warranties of any kind, whether express or implied, including but not limited to warranties of accuracy, fitness for a particular purpose, merchantability, or non-infringement. I do not warrant that the Site will be uninterrupted or error-free.</p>
+          </section>
+
+          <section id="liability">
+            <h2>Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, I will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, revenues, data, or goodwill, arising out of or related to your use of (or inability to use) the Site, even if advised of the possibility of such damages.</p>
+          </section>
+
+          <section id="indemnity">
+            <h2>Indemnification</h2>
+            <p>You agree to indemnify and hold me harmless from any claims, liabilities, damages, losses, and expenses (including reasonable attorneys’ fees) arising out of or related to your violation of these Terms or your misuse of the Site.</p>
+          </section>
+
+          <section id="privacy">
+            <h2>Privacy</h2>
+            <p>Your use of the Site is also subject to the <a href="privacy.html">Privacy Policy</a>, which explains how I collect and process personal data.</p>
+          </section>
+
+          <section id="law">
+            <h2>Governing Law & Dispute Resolution</h2>
+            <p>These Terms are governed by the laws of the People’s Republic of Bangladesh, without regard to conflict-of-laws principles. Any disputes arising out of or relating to these Terms or the Site shall be subject to the exclusive jurisdiction of the courts located in Dhaka, Bangladesh.</p>
+          </section>
+
+          <section id="changes">
+            <h2>Changes to These Terms</h2>
+            <p>I may modify these Terms from time to time. The updated version will be posted on this page with an updated “Last updated” date. Changes become effective when posted, unless otherwise stated. Your continued use of the Site after changes become effective constitutes your acceptance of the revised Terms.</p>
+          </section>
+
+          <section id="termination">
+            <h2>Termination</h2>
+            <p>I may suspend or terminate your access to the Site at any time and for any reason, including if I believe you have violated these Terms. Upon termination, your license to use the Site will immediately cease.</p>
+          </section>
+
+          <section id="misc">
+            <h2>Miscellaneous</h2>
+            <ul>
+              <li><strong>Entire Agreement:</strong> These Terms constitute the entire agreement between you and me regarding the Site.</li>
+              <li><strong>Severability:</strong> If any provision is found unenforceable, the remaining provisions will remain in full force and effect.</li>
+              <li><strong>No Waiver:</strong> Failure to enforce a provision is not a waiver of my right to do so later.</li>
+              <li><strong>Assignment:</strong> You may not assign these Terms without my prior written consent.</li>
+              <li><strong>Force Majeure:</strong> I will not be liable for delays or failures caused by events beyond my reasonable control.</li>
+              <li><strong>Headings:</strong> Headings are for convenience only and do not affect interpretation.</li>
+            </ul>
+          </section>
+
+          <section id="contact">
+            <h2>Contact</h2>
+            <p><strong>Data Controller / Operator:</strong> Ishrak Farhan Bhuiyan</p>
+            <p><strong>Address:</strong> 8/3 Shantibag, Dhaka</p>
+            <p><strong>Email:</strong> <a href="mailto:ishrakfarhan.b@gmail.com">ishrakfarhan.b@gmail.com</a></p>
+            <p><strong>Phone:</strong> 01979525874</p>
+          </section>
+        </main>
+      </div>
+
+      <!-- Footer row in card -->
+      <div class="doc-foot">
+        <span class="muted">© Ishrak Farhan Bhuiyan — All rights reserved.</span>
+        <a href="#top" style="text-decoration:none;border:1px solid var(--line);padding:.5rem .8rem;border-radius:10px;background:#fff;color:var(--ink)">Back to top ↑</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+</body>
+</html>
