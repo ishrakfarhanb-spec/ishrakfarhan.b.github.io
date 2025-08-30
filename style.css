@@ -3,18 +3,18 @@
 
 /* ---------- CSS Reset ---------- */
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0;   height: 100%; margin: 0; }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 
 /* Theme */
 :root {
-  --bg: #f4f7fb;      /* light grayish blue */
-  --ink: #0b1635;     /* Cyprus */
-  --muted: #6c7a91;   /* Noble blue */
-  --brand: #2446f2;   /* Blue */
-  --accent: #ff4b77;  /* Pink */
-  --accent-2:#ff6d8f;
+  --bg: #ffffff;      /* white */
+  --ink: #070f24;     /* Cyprus */
+  --muted: #8e9299;   /* Noble blue */
+  --brand: #8e8585;   /* Blue */
+  --accent: #be2020;  /* Pink */
+  --accent-2:#d35656;
   --shadow: 0 10px 25px rgba(13,34,89,.10);
 }
 
@@ -22,8 +22,15 @@ a { text-decoration: none; color: inherit; }
 body {
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--ink);
-  background: linear-gradient(90deg, #f4f7fb 0%, #f7f9fd 50%, #f1f5fb 100%);
+  background: #ffffff; 
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 135vh;
+}
+
+main {
+  flex: 1;  /* pushes footer to the bottom */
 }
 
 /* Headings use Poppins */
@@ -32,15 +39,27 @@ h1,h2,h3,.brand-text,.nav-link {
 }
 
 /* ---------- Header ---------- */
-.site-header {
-  position: relative;
-  z-index:1001;
-  background:var(--bg);
+.site-header 
+{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;   
+  background: transparent;
+  box-shadow: none !important;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   align-items: center;
   padding: 8px 24px;
 }
+
+.site-header.scrolled {
+  background: rgba(255, 255, 255, 0.85);  /* adds the white haze */
+  backdrop-filter: blur(6px);             /* subtle diffusion */
+  -webkit-backdrop-filter: blur(6px);     /* Safari support */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 
 .brand { display:flex; align-items:center; gap:10px; font-weight:700; }
 
@@ -57,7 +76,7 @@ h1,h2,h3,.brand-text,.nav-link {
   line-height: 1.2;
 }
 
-.brand-text { font-size:24px; }
+.brand-text { font-size:24px; color: #0b1635; }
 .nav { display:flex; gap:24px; justify-content:right; }
 .nav-link { font-weight:600; font-size:16px; color:#3b4a67; }
 .nav-link:hover {
@@ -80,6 +99,7 @@ h1,h2,h3,.brand-text,.nav-link {
   align-items: flex-start;          /* content from the top */
   justify-content: flex-start;      /* content on the left */
   padding: 80px 56px;               /* room around the text */
+  padding-top: 72px
   
 }
 
@@ -89,6 +109,7 @@ h1,h2,h3,.brand-text,.nav-link {
   position: absolute; inset: 0;
   background: linear-gradient(90deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.55) 36%, rgba(255,255,255,.10) 70%, rgba(255,255,255,0) 100%);
   pointer-events: none;
+  z-index: 0;
 }
 
 /* Boxed description area (no border) in the left corner */
@@ -120,8 +141,8 @@ h1,h2,h3,.brand-text,.nav-link {
   font-family: "Poppins", sans-serif;
   letter-spacing: .1em;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #3a4670;
+  font-weight: 700;
+  color: var(--ink);
   margin: 0 0 2.5px 0;
   font-size: clamp(12px, 2.5vw, 22px);
 }
@@ -142,11 +163,11 @@ h1,h2,h3,.brand-text,.nav-link {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: #070f24;
   color:#fff;
 }
 
-.btn-primary:hover { background: var(--brand);}
+.btn-primary:hover { background: var(--accent);}
 
 .btn-ghost {
   background:#fff; border-color:#e5e9f5; color: var(--ink);
@@ -164,7 +185,7 @@ h1,h2,h3,.brand-text,.nav-link {
   font-weight:600; color:var(--brand);
   transition:all 0.2s ease;
 }
-.links a:hover { background:var(--brand); color:#fff; }
+.links a:hover { background:var(--accent);border-color: var(--accent); color:#fff; }
 .links a i { font-size:18px; }
 
 
@@ -188,12 +209,14 @@ form {
 
 /* ---------- Footer ---------- */
 footer {
-  background: var(--bg);      /* match header color */
+  position: relative;
+  background: var(--bg);
+  box-shadow: none;   
   color: var(--ink);          /* text color */
   text-align: center;
   padding: 1px 0;             /* healthy vertical spacing */
   font-size: 0.5rem;         /* readable size */
-  margin-top: 1px;
+  margin-top: auto;
 }
 
 footer .footer-links {
@@ -218,7 +241,7 @@ footer .footer-links a:hover {
 
 footer .footer-bottom {
   margin: 5;
-  border-top: 1.5px solid var(--muted);
+  border-top: 0px;
   padding: 0px;
   font-size: 0.6rem;
   line-height: 0.1;
@@ -230,4 +253,3 @@ footer .footer-bottom {
 .hero-photo {
   display: none;
 }
-
