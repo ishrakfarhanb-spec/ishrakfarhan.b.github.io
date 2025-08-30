@@ -84,8 +84,8 @@
   /* Target only the profile photo, not every <img> in .hero */
   .hero-photo {
     display: block;
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 0 18px 0;
