@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const phrases = [
     "Aspiring Finance Professional",
     "Musician",
+    "Violinist",
+    "Flautist",
     "Reader",
     "Creative Artist"
   ];
