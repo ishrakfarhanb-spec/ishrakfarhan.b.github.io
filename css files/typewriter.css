@@ -1,21 +1,32 @@
 /* css/typewriter.css */
-.typewriter 
-{
+.typewriter {
   display: inline-block;
-  border-right: 3px solid #3a4670; /* Cursor effect */
-  font-family: "Poppins", sans-serif;
-  letter-spacing: .1em;
+  /* smooth cursor that doesn't shove layout */
+  border-right: 2px solid currentColor;
+  padding-right: .12em;
   white-space: nowrap;
   overflow: hidden;
+
+  /* keep rendering crisp & stable */
+  font-family: "Poppins", sans-serif;
+  letter-spacing: .1em;
+  font-variant-ligatures: none;         /* avoid ligature jumps */
+  -webkit-font-smoothing: antialiased;  /* crisper edges */
+  -moz-osx-font-smoothing: grayscale;
+  will-change: contents, border-color;
 }
 
+/* Smooth fade instead of 'step-end' blink */
 .blink {
-  animation: blink .75s step-end infinite;
+  animation: caret-blink 1.05s ease-in-out infinite;
 }
 
-/* Cursor blink */
-@keyframes blink 
-{
-  from, to { border-color: transparent; }
-  50% { border-color: #3a4670; }
+/* Cursor blink uses opacity fade for smoothness */
+@keyframes caret-blink {
+  0%   { border-color: transparent; opacity: .85; }
+  50%  { border-color: currentColor; opacity: 1; }
+  100% { border-color: transparent; opacity: .85; }
 }
+
+/* Optional: reserve a line height so the box never "pops" */
+#typewriter { min-height: 1em; }
