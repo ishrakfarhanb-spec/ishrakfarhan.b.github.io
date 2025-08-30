@@ -1,0 +1,21 @@
+/* css/typewriter.css */
+.typewriter 
+{
+  display: inline-block;
+  border-right: 3px solid #3a4670; /* Cursor effect */
+  font-family: "Poppins", sans-serif;
+  letter-spacing: .1em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.blink {
+  animation: blink .75s step-end infinite;
+}
+
+/* Cursor blink */
+@keyframes blink 
+{
+  from, to { border-color: transparent; }
+  50% { border-color: #3a4670; }
+}
