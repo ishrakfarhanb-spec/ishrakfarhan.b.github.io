@@ -92,7 +92,7 @@ h1,h2,h3,.brand-text,.nav-link {
 
 /* ---------- Hero (desktop/base) ---------- */
 .hero {
-  background: url("images/Website Home page 1.png") no-repeat right center / cover;
+  background: url("images/Website Home page.png") no-repeat right center / cover;
   position: relative;
   min-height: 100vh;               /* full viewport */
   display: flex;
