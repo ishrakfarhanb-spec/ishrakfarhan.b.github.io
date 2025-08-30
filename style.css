@@ -87,9 +87,6 @@ h1,h2,h3,.brand-text,.nav-link {
   text-decoration-color: rgba(255,75,119,.35);
 }
 
-/* Default: desktop shows nav, hides hamburger */
-.nav-toggle { display: none; }
-
 /* Highlight the current page link */
 .nav-link.active {
   color: #fff;  
@@ -98,7 +95,9 @@ h1,h2,h3,.brand-text,.nav-link {
   border-radius: 8px;
   font-weight: 700;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, color 0.3s ease;
 }
+
 
 /* ---------- Hero (desktop/base) ---------- */
 .hero {
