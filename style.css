@@ -189,7 +189,7 @@ h1,h2,h3,.brand-text,.nav-link {
 }
 
 .btn:hover {
-  background: linear-gradient(90deg, #ee0979, #ff6a00); /* reverse gradient */
+  background: linear-gradient(90deg, #ee0979, #ff6a00);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
