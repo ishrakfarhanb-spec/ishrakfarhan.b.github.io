@@ -176,20 +176,22 @@ h1,h2,h3,.brand-text,.nav-link {
 
 /* ---------- Buttons ---------- */
 .btn {
-  display:inline-flex; align-items:center; gap:10px;
-  padding:12px 24px; border-radius:999px; font-weight:700;
-  transition:all 0.2s ease; border:2px solid transparent;
-}
-
-.btn-primary {
-  background: #070f24;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 24px;
+  border-radius:999px;
+  font-weight:700;
+  transition:all 0.3s ease;
+  border:2px solid transparent;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
   color:#fff;
 }
 
-.btn-primary:hover { background: var(--accent);}
-
-.btn-ghost {
-  background:#fff; border-color:#e5e9f5; color: var(--ink);
+.btn:hover {
+  background: linear-gradient(90deg, #ee0979, #ff6a00); /* reverse gradient */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* ---------- Links Section (under bio) ---------- */
