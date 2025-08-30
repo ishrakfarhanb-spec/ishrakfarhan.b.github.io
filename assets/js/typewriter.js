@@ -83,6 +83,12 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(loop);
   }
 
+  function setText(n) {
+  const txt = phrases[iPhrase].slice(0, n);
+  el.textContent = txt || "\u00A0";  // non-breaking space when empty
+}
+
+
   // Initialize
   setText(0);
   requestAnimationFrame(loop);
