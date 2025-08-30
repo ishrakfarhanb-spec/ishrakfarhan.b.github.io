@@ -118,12 +118,13 @@ h1,h2,h3,.brand-text,.nav-link {
 
 /* Eyebrow/heading styles */
 .eyebrow {
-  font-family:"Poppins",sans-serif;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  font-weight:600;
-  color:#3a4670;
-  margin:0 0 2.5px 0;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #3a4670;
+  margin: 0 0 2.5px 0;
+  font-size: clamp(12px, 2.5vw, 22px);
 }
 
 .subtitle {
