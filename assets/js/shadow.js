@@ -6,3 +6,10 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
+
+document.querySelectorAll(".nav-link").forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add("active");
+    }
+  });
+
