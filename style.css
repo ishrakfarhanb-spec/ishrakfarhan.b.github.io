@@ -73,15 +73,14 @@ h1,h2,h3,.brand-text,.nav-link {
 
 /* ---------- Hero (desktop/base) ---------- */
 .hero {
+  background: url("images/Website Home page 1.png") no-repeat right center / cover;
   position: relative;
   min-height: 100vh;               /* full viewport */
   display: flex;
   align-items: flex-start;          /* content from the top */
   justify-content: flex-start;      /* content on the left */
   padding: 80px 56px;               /* room around the text */
-
-  /* If your file name has spaces, encode them as %20 */
-  background: url("images/Website Home page 1.png") no-repeat right center / cover;
+  
 }
 
 /* Optional: subtle left-to-right overlay for readability */
@@ -143,11 +142,11 @@ h1,h2,h3,.brand-text,.nav-link {
 }
 
 .btn-primary {
-  background: linear-gradient(180deg,var(--accent),var(--accent-2));
-  color:#fff; box-shadow:0 6px 16px rgba(255,75,119,.35);
+  background: var(--accent);
+  color:#fff;
 }
 
-.btn-primary:hover { transform:translateY(-2px); }
+.btn-primary:hover { background: var(--brand);}
 
 .btn-ghost {
   background:#fff; border-color:#e5e9f5; color: var(--ink);
@@ -231,3 +230,4 @@ footer .footer-bottom {
 .hero-photo {
   display: none;
 }
+
