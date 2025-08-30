@@ -90,6 +90,16 @@ h1,h2,h3,.brand-text,.nav-link {
 /* Default: desktop shows nav, hides hamburger */
 .nav-toggle { display: none; }
 
+/* Highlight the current page link */
+.nav-link.active {
+  color: #fff;  
+  background: linear-gradient(90deg, #ff6a00, #ee0979); /* colorful gradient */
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
 /* ---------- Hero (desktop/base) ---------- */
 .hero {
   background: url("images/Website Home page.png") no-repeat right center / cover;
